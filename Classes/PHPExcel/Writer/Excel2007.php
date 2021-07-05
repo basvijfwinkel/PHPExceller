@@ -316,7 +316,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
 
 			
 			// Add media (first add the media so we know the rId)
-			$insertionCounter = 1;
+			$insertionCounter = 10000;
 			$addedMediaReferences = array();
 			for ($i = 0; $i < $this->getDrawingHashTable()->count(); ++$i) 
 			{
