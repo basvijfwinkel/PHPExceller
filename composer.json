@@ -1,0 +1,29 @@
+{
+    "name": "phpexceller/phpexceller",
+    "description": "PHPExceller - Read, Create and Write Excel Spreadsheet documents in PHP - Spreadsheet engine",
+    "keywords": ["PHP","Excel","xlsx","xls","spreadsheet"],
+    "homepage": "https://github.com/basvijfwinkel/PHPExceller",
+    "type": "library",
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Bas Vijfwinkel"
+        }
+    ],
+    "require": {
+        "php": "^5.2|^7.0",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-xmlwriter": "*",
+        "ext-zip" : "*",
+        "ext-gd" : "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "PHPExceller": "Classes/"
+        }
+    }
+}
