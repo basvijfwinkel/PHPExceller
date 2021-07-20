@@ -1,5 +1,6 @@
 {
     "name": "phpexceller/phpexceller",
+     "version": "1.0",
     "description": "PHPExceller - Read, Create and Write Excel Spreadsheet documents in PHP - Spreadsheet engine",
     "keywords": ["PHP","Excel","xlsx","xls","spreadsheet"],
     "homepage": "https://github.com/basvijfwinkel/PHPExceller",
