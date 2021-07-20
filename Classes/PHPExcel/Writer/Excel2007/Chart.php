@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Writer;
 /**
  * PHPExceller
  *

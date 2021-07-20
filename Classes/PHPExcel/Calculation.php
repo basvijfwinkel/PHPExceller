@@ -1,13 +1,7 @@
 <?php
 
-/** PHPExceller root directory */
-if (!defined('PHPEXCELLER_ROOT')) {
-    /**
-     * @ignore
-     */
-    define('PHPEXCELLER_ROOT', dirname(__FILE__) . '/../');
-    require(PHPEXCELLER_ROOT . 'PHPExceller/Autoloader.php');
-}
+namespace PHPExceller;
+
 
 if (!defined('CALCULATION_REGEXP_CELLREF')) {
     //    Test for support of \P (multibyte options) in PCRE

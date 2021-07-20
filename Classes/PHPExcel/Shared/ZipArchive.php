@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Shared;
 
 if (!defined('PCLZIP_TEMPORARY_DIR')) {
     define('PCLZIP_TEMPORARY_DIR', PHPExceller_Shared_File::sys_get_temp_dir() . DIRECTORY_SEPARATOR);

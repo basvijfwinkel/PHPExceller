@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Calculation;
 
 /** PHPExceller root directory */
 if (!defined('PHPEXCELLER_ROOT')) {

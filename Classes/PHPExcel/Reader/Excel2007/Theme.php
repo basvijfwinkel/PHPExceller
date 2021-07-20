@@ -1,4 +1,6 @@
 <?php
+namespace PHPExceller\Reader;
+
 /**
  * PHPExceller
  *

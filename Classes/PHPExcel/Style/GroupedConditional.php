@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Style;
 
 class PHPExceller_Style_GroupedConditional extends PHPExceller_Style_Supervisor
 {

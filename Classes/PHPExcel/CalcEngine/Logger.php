@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\CalcEngine;
 
 /**
  * PHPExceller_CalcEngine_Logger

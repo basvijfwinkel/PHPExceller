@@ -1,4 +1,6 @@
 <?php
+namespace PHPExceller\Style;
+
 /**
  * PHPExceller
  *

@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Chart;
 
 /**
  * PHPExceller_Chart_PlotArea

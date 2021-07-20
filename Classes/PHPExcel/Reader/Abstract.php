@@ -1,5 +1,7 @@
 <?php
 
+namespace PHPExceller\Reader;
+
 /**
  * PHPExceller_Reader_Abstract
  *

@@ -1,6 +1,6 @@
 <?php
 
-require_once(PHPExceller_ROOT . 'PHPExceller/Shared/trend/BestFit.php');
+namespace PHPExceller\Shared;
 
 /**
  * PHPExceller_Exponential_Best_Fit

@@ -1,5 +1,6 @@
 <?php
 
+namespace PHPExceller\Chart;
 require_once(PHPExceller_Settings::getChartRendererPath().'/jpgraph.php');
 
 /**

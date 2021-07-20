@@ -1,6 +1,5 @@
-?php
-
-require_once PHPExceller_ROOT . 'PHPExceller/Shared/trend/BestFit.php';
+<?php
+namespace PHPExceller\Shared;
 
 /**
  * PHPExceller_Power_Best_Fit

@@ -1,4 +1,6 @@
 <?php
+namespace PHPExceller\Chart;
+
 require_once 'ChartProperties.php';
 
 /**
