@@ -184,17 +184,17 @@ class PHPExceller_Chart
     /**
      * Create a new PHPExceller_Chart
      */
-    public function __construct($name, 
-                                PHPExceller_Chart_Title $title = null, 
-                                PHPExceller_Chart_Legend $legend = null, 
-                                PHPExceller_Chart_PlotArea $plotArea = null, 
-                                $plotVisibleOnly = true, 
-                                $displayBlanksAs = '0', 
-                                PHPExceller_Chart_Title $xAxisLabel = null, 
-                                PHPExceller_Chart_Title $yAxisLabel = null, 
-                                PHPExceller_Chart_Axis $xAxis = null, 
-                                PHPExceller_Chart_Axis $yAxis = null, 
-                                PHPExceller_Chart_GridLines $majorGridlines = null, 
+    public function __construct($name,
+                                PHPExceller_Chart_Title $title = null,
+                                PHPExceller_Chart_Legend $legend = null,
+                                PHPExceller_Chart_PlotArea $plotArea = null,
+                                $plotVisibleOnly = true,
+                                $displayBlanksAs = '0',
+                                PHPExceller_Chart_Title $xAxisLabel = null,
+                                PHPExceller_Chart_Title $yAxisLabel = null,
+                                PHPExceller_Chart_Axis $xAxis = null,
+                                PHPExceller_Chart_Axis $yAxis = null,
+                                PHPExceller_Chart_GridLines $majorGridlines = null,
                                 PHPExceller_Chart_GridLines $minorGridlines = null,
                                 PHPExceller_Chart_Axis $secondaryYAxis = NULL,
                                 PHPExceller_Chart_Axis $secondaryXAxis = NULL)
@@ -217,7 +217,7 @@ class PHPExceller_Chart
 
     /**
     * Set the secondary Y-Axis
-    * @param    Boolean $use 
+    * @param    Boolean $use
     * @return    PHPExceller_Chart
     *
     */
@@ -226,10 +226,10 @@ class PHPExceller_Chart
         $this->secondaryYAxis = $secondaryYAxis;
                 $this->useSecondaryYAxis = true;
     }
-    
+
     /**
     * Set the secondary X-Axis
-    * @param    Boolean $use 
+    * @param    Boolean $use
     * @return    PHPExceller_Chart
     *
     */
@@ -250,7 +250,7 @@ class PHPExceller_Chart
             $this->secondaryYAxisLabel = $secondaryYAxisLabel;
         }
 
-    
+
     /**
     * Get the secondary Y-Axis
     * @return void
@@ -266,7 +266,6 @@ class PHPExceller_Chart
              {
                  return $this->getChartAxisY();
              }
-             
     }
 
        /**
@@ -279,7 +278,7 @@ class PHPExceller_Chart
            return $this->secondaryYAxisLabel;
         }
 
-    
+
     /**
     * Get the secondary X-Axis
     * @return void
@@ -306,7 +305,7 @@ class PHPExceller_Chart
         {
             return $this->useSecondaryYAxis;
         }
-    
+
     /**
      * Get Name
      *
@@ -714,7 +713,7 @@ class PHPExceller_Chart
         }
         return $renderer->render($outputDestination);
     }
-    
+
     public function updateWorkbookName($workbookname)
     {
         if ($this->plotArea)

@@ -1,7 +1,25 @@
 <?php
-
 namespace PHPExceller;
 
+use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Calculation\PHPExceller_Calculation_Token_Stack;
+use PHPExceller\Calculation\PHPExceller_Calculation_Function;
+use PHPExceller\Calculation\PHPExceller_Calculation_Database;
+use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
+use PHPExceller\Calculation\PHPExceller_Calculation_Engineering;
+use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\Calculation\PHPExceller_Calculation_Financial;
+use PHPExceller\Calculation\PHPExceller_Calculation_FormulaParser;
+use PHPExceller\Calculation\PHPExceller_Calculation_FormulaToken;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\PHPExceller_Calculation_Logical;
+use PHPExceller\Calculation\PHPExceller_Calculation_LookupRef;
+use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
+use PHPExceller\Calculation\PHPExceller_Calculation_Statistical;
+use PHPExceller\Calculation\PHPExceller_Calculation_TextData;
+use PHPExceller\CalcEngine\PHPExceller_CalcEngine_CyclicReferenceStack;
+use PHPExceller\CalcEngine\PHPExceller_CalcEngine_Logger;
 
 if (!defined('CALCULATION_REGEXP_CELLREF')) {
     //    Test for support of \P (multibyte options) in PCRE

@@ -1,6 +1,18 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_CacheBase;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Cell\PHPExceller_Cell_DataType;
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;  
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Cell\PHPExceller_Cell_DataValidation;
+use PHPExceller\Cell\PHPExceller_Cell_DefaultValueBinder;
+use PHPExceller\Cell\PHPExceller_Cell_IValueBinder;
+
 /**
  *    PHPExceller_Cell
  *
