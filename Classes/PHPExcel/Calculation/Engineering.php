@@ -1,13 +1,5 @@
 <?php
-
-/** PHPExceller root directory */
-if (!defined('PHPEXCELLER_ROOT')) {
-    /**
-     * @ignore
-     */
-    define('PHPEXCELLER_ROOT', dirname(__FILE__) . '/../../');
-    require(PHPEXCELLER_ROOT . 'PHPExcel/Autoloader.php');
-}
+namespace PHPExceller\Calculation;
 
 /** EULER */
 define('EULER', 2.71828182845904523536);

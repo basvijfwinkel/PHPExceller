@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Style;
 /**
  * PHPExcel_Style_Alignment
  *

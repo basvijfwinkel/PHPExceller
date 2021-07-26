@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Calculation;
 
 /**
  * PHPExceller_Calculation_Token_Stack

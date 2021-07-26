@@ -1,5 +1,5 @@
 <?php
-require_once 'ChartProperties.php';
+namespace PHPExceller\Chart;
 
 class PHPExceller_Chart_GridLines extends ChartProperties 
 {

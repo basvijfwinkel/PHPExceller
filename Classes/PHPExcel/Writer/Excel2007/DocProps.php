@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Writer;
 
 /**
  * PHPExceller_Writer_Excel2007_DocProps

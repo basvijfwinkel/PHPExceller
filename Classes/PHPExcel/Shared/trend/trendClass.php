@@ -1,10 +1,5 @@
 <?php
-
-require_once PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/LinearBestFit.php';
-require_once PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/LogarithmicBestFit.php';
-require_once PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/ExponentialBestFit.php';
-require_once PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/PowerBestFit.php';
-require_once PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/PolynomialBestFit.php';
+namespace PHPExceller\Shared;
 
 /**
  * PHPExceller_trendClass

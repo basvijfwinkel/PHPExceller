@@ -1,13 +1,5 @@
 <?php
-
-/**    PHPExceller root directory */
-if (!defined('PHPEXCELLER_ROOT')) {
-    /**
-     * @ignore
-     */
-    define('PHPEXCELLER_ROOT', dirname(__FILE__) . '/../');
-    require(PHPEXCELLEr_ROOT . 'PHPExceller/Autoloader.php');
-}
+namespace PHPExceller;
 
 /**
  * PHPExceller_IOFactory

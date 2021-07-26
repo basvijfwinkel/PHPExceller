@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Cell;
 
 /**
  * PHPExceller_Cell_DataType

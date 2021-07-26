@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Calculation;
 
 /*
 PARTLY BASED ON:

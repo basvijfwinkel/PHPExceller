@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\RichText;
 
 /**
  * PHPExceller_RichText_Run

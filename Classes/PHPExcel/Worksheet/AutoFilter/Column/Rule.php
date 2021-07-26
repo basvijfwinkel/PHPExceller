@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Worksheet;
 
 /**
  * PHPExceller_Worksheet_AutoFilter_Column_Rule

@@ -1,5 +1,5 @@
 <?php
-
+namespace PHPExceller\Helper;
 /**
  * PHPExceller_Helper
  *

@@ -1,6 +1,5 @@
 <?php
-
-require_once(PHPEXCELLER_ROOT . 'PHPExceller/Shared/trend/BestFit.php');
+namespace PHPExceller\Shared;
 
 /**
  * PHPExceller_Logarithmic_Best_Fit

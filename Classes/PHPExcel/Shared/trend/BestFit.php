@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\Shared;
 
 /**
  * PHPExceller_Best_Fit

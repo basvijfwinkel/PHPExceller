@@ -1,4 +1,5 @@
 <?php
+namespace PHPExceller\CachedObjectStorage;
 
 /**
  * PHPExceller_CachedObjectStorage_Memory
