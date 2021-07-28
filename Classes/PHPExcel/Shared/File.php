@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
+use ZipArchive;
+
 /**
  * PHPExceller_Shared_File
  *

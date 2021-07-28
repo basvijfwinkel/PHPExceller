@@ -1,7 +1,9 @@
 <?php
 namespace PHPExceller\Chart;
 
-class PHPExceller_Chart_GridLines extends ChartProperties 
+use HPExceller\Chart\ChartProperties;
+
+class PHPExceller_Chart_GridLines extends ChartProperties
 {
 
   /**

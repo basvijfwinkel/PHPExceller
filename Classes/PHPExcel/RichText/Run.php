@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\RichText;
 
+use PHPExceller\RichText\PHPExceller_RichText_TextElement;
+use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
+use PHPExceller\Style\PHPExceller_Style_Font;
+
 /**
  * PHPExceller_RichText_Run
  *

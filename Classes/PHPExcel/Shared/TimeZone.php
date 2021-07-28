@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
+use DateTimeZone;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller
  *

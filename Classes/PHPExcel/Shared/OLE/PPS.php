@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Shared_OLE;
+
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
 // +----------------------------------------------------------------------+

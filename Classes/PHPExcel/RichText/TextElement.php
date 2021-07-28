@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\RichText;
 
+use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
+
 /**
  * PHPExceller_RichText_TextElement
  *

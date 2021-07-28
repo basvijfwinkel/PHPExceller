@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_CFVOType;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller
  *
@@ -51,13 +54,13 @@ class PHPExceller_Style_CFVOType
     *    @var type
     */
     protected $_type;
-    
+
     /*
     * @var child value (percentile uses this field to define it's value)
     */
     protected $_childValue;
-    
-    
+
+
     /*
     * constructor : PHPExceller_Style_CFVOType object should be created with 'fromString' method
     *
@@ -71,7 +74,7 @@ class PHPExceller_Style_CFVOType
         // add additional data
         $this->addAdditionalData($data);
     }
-    
+
     protected function addAdditionalData($data)
     {
         if (($this->_type == PHPExceller_Style_CFVOType::PERCENTILE) ||
@@ -89,7 +92,7 @@ class PHPExceller_Style_CFVOType
             }
         }
     }
-    
+
     /**
      * check if a valid cfvo type is passed and return an object representing this type
      *
@@ -122,7 +125,7 @@ class PHPExceller_Style_CFVOType
                                     break;
                 case 'formula':
                                     return new PHPExceller_Style_CFVOType(PHPExceller_Style_CFVOType::FORMULA, $data);
-                                    break;                                    
+                                    break;
                 case 'percentile':
                                     return new PHPExceller_Style_CFVOType(PHPExceller_Style_CFVOType::PERCENTILE, $data);
                                     break;
@@ -137,14 +140,14 @@ class PHPExceller_Style_CFVOType
         // unknown type
         throw new PHPExceller_Exception("Invalid CFVOType value passed.:".$type);
     }
-    
+
     public static function fromXML($data)
     {
         $attributes = $data->attributes();
         $type = (string)$data['type'];
         return PHPExceller_Style_CFVOType::fromString($type, $attributes);
     }
-    
+
     /*
     * create a PHPExceller_Style_CFVOType object from an array of settings
     *
@@ -167,7 +170,7 @@ class PHPExceller_Style_CFVOType
         // unknown type
         throw new PHPExceller_Exception("Invalid CFVOType value passed.");
     }
-    
+
     /*
      * Return the cfvo type information as an array
      *
@@ -177,7 +180,7 @@ class PHPExceller_Style_CFVOType
     {
         if (($this->_type == PHPExceller_Style_CFVOType::PERCENTILE) ||
             ($this->_type == PHPExceller_Style_CFVOType::PERCENT) ||
-            ($this->_type == PHPExceller_Style_CFVOType::NUM))        
+            ($this->_type == PHPExceller_Style_CFVOType::NUM))
         {
             if ($forExtLst)
             {
@@ -204,6 +207,6 @@ class PHPExceller_Style_CFVOType
                                                                      'attributes' => $this->_type)));
         }
     }
-    
+
 }
 ?>

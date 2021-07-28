@@ -1,6 +1,11 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_Supervisor;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Style\PHPExceller_Style_CFVOType;
+use PHPExceller\PHPExceller_Cell;
+
 class PHPExceller_Style_GroupedConditional extends PHPExceller_Style_Supervisor
 {
     /**
@@ -163,7 +168,7 @@ class PHPExceller_Style_GroupedConditional extends PHPExceller_Style_Supervisor
         /*
          * Get a unique classID for this object
          *
-         * @return<---->string<>CLASSID v3 string : e.g. {1546058F-5A25-4334-85AE-E68F2A44BBAF}
+         * @return string CLASSID v3 string : e.g. {1546058F-5A25-4334-85AE-E68F2A44BBAF}
          *
          */
          public function getClassID()

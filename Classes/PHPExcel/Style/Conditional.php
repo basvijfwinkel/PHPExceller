@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_Conditional;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_Style;
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_DataBar;
+use PHPExceller\Style\PHPExceller_Style_ColorScale;
+use PHPExceller\Style\PHPExceller_Style_IconSet;
+
 /**
  * PHPExceller
  *
@@ -146,7 +154,7 @@ class PHPExceller_Style_Conditional implements PHPExceller_IComparable
      * @var string
      */
     private $_bottom;
-    
+
     /**
      * ConditionObject
      *
@@ -159,8 +167,8 @@ class PHPExceller_Style_Conditional implements PHPExceller_IComparable
      *
      * @var
      */
-    private $_cellReference;    
-    
+    private $_cellReference;
+
     /**
      * Create a new PHPExceller_Style_Conditional
      */
@@ -214,7 +222,7 @@ class PHPExceller_Style_Conditional implements PHPExceller_IComparable
         $this->_priority = $pValue;
         return $this;
     }
-    
+
          /**
      * Get aboveAverage 
      *
@@ -274,7 +282,7 @@ class PHPExceller_Style_Conditional implements PHPExceller_IComparable
         $this->_timePeriod = $pValue;
         return $this;
     }
-    
+
      /**
      * Get bottom 
      *
@@ -345,7 +353,7 @@ class PHPExceller_Style_Conditional implements PHPExceller_IComparable
         }
         return $this;
     }
-        
+
     /**
      * Set cellReference
      *

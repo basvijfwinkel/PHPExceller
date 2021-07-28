@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_Supervisor;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\Shared\PHPExceller_Shared_Date;
+use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+
 /**
  * PHPExceller_Style_NumberFormat
  *

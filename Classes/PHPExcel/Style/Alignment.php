@@ -1,5 +1,11 @@
 <?php
 namespace PHPExceller\Style;
+
+use PHPExceller\Style\PHPExceller_Style_Supervisor;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Style\PHPExceller_Style_Alignment;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExcel_Style_Alignment
  *

@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_IconSet_CFIcon;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller
  *

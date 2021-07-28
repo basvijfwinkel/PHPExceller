@@ -1,6 +1,26 @@
 <?php
 namespace PHPExceller\Reader;
 
+use PHPExceller\Reader\PHPExceller_Reader_Abstract;
+use PHPExceller\Reader\PHPExceller_Reader_IReader;
+use PHPExceller\Reader\PHPExceller_Reader_DefaultReadFilter;
+use PHPExceller\PHPExceller_ReferenceHelper;
+use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\PHPExceller_Settings;
+use PHPExceller\Reader\PHPExceller_Reader_Excel2007_Theme;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\PHPExceller_Style;
+use PHPExceller\Shared\PHPExceller_Shared_Date;
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Style\PHPExceller_Style_Conditional;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
+use PHPExceller\Shared\PHPExceller_Shared_File;
+use PHPExceller\PHPExceller_NamedRange;
+use PHPExceller\Shared\PHPExceller_Shared_Font;
+
 /**
  * PHPExceller_Reader_Excel2007
  *
@@ -976,7 +996,7 @@ class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implement
                                 foreach ($conditionals as $ref => $cfRules) {
                                     ksort($cfRules);
                                     $conditionalStyles = array();
-                                    foreach ($cfRules as $priority => $cfRule) 
+                                    foreach ($cfRules as $priority => $cfRule)
                                     {
 
                                         $objConditional = new PHPExceller_Style_Conditional();
@@ -1018,7 +1038,7 @@ class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implement
                                             }
                                             // specific setting for PHPExceller_Style_Conditional::CONDITION_TOP10
                                             if ((string)$cfRule["type"] == PHPExceller_Style_Conditional::CONDITION_TOP10)
-                                            {                                            
+                                            {
                                                 if ((string)$cfRule["percent"] != '') {
                                                     $objConditional->setPercent((string)$cfRule["percent"]);
                                                 }
@@ -1046,7 +1066,7 @@ class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implement
 
                                     // Extract all cell references in $ref
                                     $aReferences = PHPExceller_Cell::extractAllCellReferencesInRange($ref);
-                                    foreach ($aReferences as $reference) 
+                                    foreach ($aReferences as $reference)
                                     {
                                         $docSheet->getStyle($reference)->setConditionalStyles($conditionalStyles);
                                     }
@@ -1498,7 +1518,7 @@ class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implement
                                 $relsWorksheet = simplexml_load_string($this->securityScan($this->getFromZipArchive($zip,  dirname("$dir/$fileWorksheet") . "/_rels/" . basename($fileWorksheet) . ".rels")), 'SimpleXMLElement', PHPExceller_Settings::getLibXmlLoaderOptions()); //~ http://schemas.openxmlformats.org/package/2006/relationships");
                                 $drawings = array();
                                 foreach ($relsWorksheet->Relationship as $ele) {
-                                    if ($ele["Type"] == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing") 
+                                    if ($ele["Type"] == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing")
                                     {
                                         $drawings[(string) $ele["Id"]] = self::dir_add("$dir/$fileWorksheet", $ele["Target"]);
                                     }
@@ -1796,13 +1816,13 @@ class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implement
                                         if ((isset($attributes['type'])) && ((string)$attributes['type'] == 'iconSet'))
                                         {
                                             $cfRule = $conditionalFormatting->cfRule;
-                                            // get the cell group                                            
+                                            // get the cell group
                                             $cellReference = (string)$conditionalFormatting->children('xm',TRUE)->sqref;
                                             // get the priority
                                             $priority = (isset($attributes['priority']))?$attributes['priority']:99;
-                                            // create a new conditional for this iconSet                                            
+                                            // create a new conditional for this iconSet
                                             $objConditional = new PHPExceller_Style_Conditional();
-                                            $objConditional->setConditionType(PHPExceller_Style_Conditional::CONDITION_ICONSET);                                            
+                                            $objConditional->setConditionType(PHPExceller_Style_Conditional::CONDITION_ICONSET);
                                             $objConditional->setPriority($priority);
                                             $objConditional->setConditionalObject($cellReference, $cfRule, null);
                                             // link the conditional to the related cells

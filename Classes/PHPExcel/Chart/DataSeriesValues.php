@@ -1,6 +1,11 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Chart\PHPExceller_Chart_Exception;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_Chart_DataSeriesValues
  *

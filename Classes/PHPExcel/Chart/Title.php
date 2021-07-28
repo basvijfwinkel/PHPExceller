@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Chart\PHPExceller_Chart_Layout;
+use PHPExceller\Style\PHPExceller_Style_Font;
+
 /**
  * PHPExceller_Chart_Title
  *

@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Shared_File;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+
 if (!defined('PCLZIP_TEMPORARY_DIR')) {
     define('PCLZIP_TEMPORARY_DIR', PHPExceller_Shared_File::sys_get_temp_dir() . DIRECTORY_SEPARATOR);
 }
@@ -151,7 +154,7 @@ class PHPExceller_Shared_ZipArchive
 
         return $contents;
     }
-    
+
     public function getFromIndex($index) {
         $extracted = $this->zip->extractByIndex($index, PCLZIP_OPT_EXTRACT_AS_STRING);
         $contents = '';

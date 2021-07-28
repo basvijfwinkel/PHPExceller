@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_Font;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+
 /**
  * PHPExceller
  *

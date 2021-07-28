@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Chart;
 
-require_once 'ChartProperties.php';
+use PHPExceller\Chart\ChartProperties;
 
 /**
  * PHPExceller_Chart_Axis

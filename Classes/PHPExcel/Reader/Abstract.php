@@ -1,6 +1,8 @@
 <?php
-
 namespace PHPExceller\Reader;
+
+use PHPExceller\Reader\PHPExceller_Reader_IReader;
+use PHPExceller\Reader\PHPExceller_Reader_Exception;
 
 /**
  * PHPExceller_Reader_Abstract

@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_DataBar_DataBarAxisPosition;
+
 /**
  * PHPExceller
  *

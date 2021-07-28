@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Chart\PHPExceller_Chart_DataSeriesValues;
+
 /**
  * PHPExceller
  *

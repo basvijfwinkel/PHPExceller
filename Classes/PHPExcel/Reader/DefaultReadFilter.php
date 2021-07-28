@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Reader;
 
+use PHPExceller\Reader\PHPExceller_Reader_IReadFilter;
+
 /**
  * PHPExceller_Reader_DefaultReadFilter
  *

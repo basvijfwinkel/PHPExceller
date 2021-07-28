@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\PHPExceller_Cell;
+
+
 /**
  * PHPExceller_Shared_Excel5
  *

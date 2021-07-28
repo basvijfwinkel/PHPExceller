@@ -1,6 +1,15 @@
 <?php
 namespace PHPExceller\Reader;
 
+use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\Chart\PHPExceller_Chart_Layout;
+use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
+use PHPExceller\Chart\PHPExceller_Chart_Legend;
+use PHPExceller\PHPExceller_Chart;
+use PHPExceller\Chart\PHPExceller_Chart_Title;
+use PHPExceller\Chart\PHPExceller_Chart_DataSeries;
+use PHPExceller\PHPExceller_RichText;
+
 /**
  * PHPExceller
  *

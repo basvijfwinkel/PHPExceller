@@ -1,6 +1,7 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Reader\PHPExceller_Reader_Exception;
 /**
  * PHPExceller_Shared_ZipStreamWrapper
  *

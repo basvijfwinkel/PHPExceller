@@ -1,6 +1,8 @@
 <?php
-
 namespace PHPExceller\Shared;
+
+use PHPExceller\Reader\PHPExceller_Reader_Exception;
+
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
 // +----------------------------------------------------------------------+

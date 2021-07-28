@@ -2,6 +2,8 @@
 
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Best_Fit;
+
 /**
  * PHPExceller_Exponential_Best_Fit
  *

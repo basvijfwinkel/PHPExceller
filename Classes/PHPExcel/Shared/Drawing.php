@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Shared_Font;
+use PHPExceller\Style\PHPExceller_Style_Font;
+
 /**
  * PHPExceller
  *

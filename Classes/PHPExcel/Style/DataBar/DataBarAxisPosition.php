@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_DataBar_DataBarAxisPosition;
+
 /**
  * PHPExceller
  *
@@ -48,13 +51,13 @@ class PHPExceller_Style_DataBar_DataBarAxisPosition
     * constructor : PHPExceller_Style_DataBar_DataBarAxisPosition object should be created with 'fromString' method
     *
     * @params    string     $position    valid databar axis position
-    * 
+    *
     */
     protected function __construct($position)
     {
         $this->position = $position;
     }
-    
+
     /**
      * check if the databar axis position is correct and return a PHPExceller_Style_DataBar_DataBarAxisPosition that represents this position
      * in case an unknown value is passed, an exception will be thrown
@@ -87,7 +90,7 @@ class PHPExceller_Style_DataBar_DataBarAxisPosition
         // unknown type
         throw new PHPExceller_Exception("Invalid DataBarAxisPosition string passed.");
     }
-    
+
     /*
     * Return the databar axis position as a string
     *

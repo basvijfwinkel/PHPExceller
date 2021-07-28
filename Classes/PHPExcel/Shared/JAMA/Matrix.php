@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+
 /**
  * @package JAMA
  */

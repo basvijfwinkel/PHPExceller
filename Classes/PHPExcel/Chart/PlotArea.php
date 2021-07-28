@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Chart\PHPExceller_Chart_Layout;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_Chart_PlotArea
  *

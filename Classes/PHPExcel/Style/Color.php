@@ -1,6 +1,11 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_Supervisor;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Style_Color
  *

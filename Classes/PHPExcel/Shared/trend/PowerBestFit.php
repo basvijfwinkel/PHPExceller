@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Best_Fit;
+
 /**
  * PHPExceller_Power_Best_Fit
  *

@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Chart_Exception
  *

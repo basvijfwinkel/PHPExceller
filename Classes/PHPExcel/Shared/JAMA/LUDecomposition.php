@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
+use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+
 /**
  *    @package JAMA
  *

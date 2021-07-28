@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+
 /**
  * PHPExceller_Shared_Date
  *

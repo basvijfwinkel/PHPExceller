@@ -1,7 +1,8 @@
 <?php
-
 namespace PHPExceller\Chart;
-require_once(PHPExceller_Settings::getChartRendererPath().'/jpgraph.php');
+
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\PHPExceller_Settings;
 
 /**
  * PHPExceller_Chart_Renderer_jpgraph

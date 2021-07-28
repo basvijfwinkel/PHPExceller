@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
+use PHPExceller\Shared\PHPExceller_Shared_Escher_DgContainer_SpgrContainer;
+
 /**
  * PHPExceller_Shared_Escher_DgContainer_SpgrContainer_SpContainer
  *

@@ -1,6 +1,12 @@
 <?php
 namespace PHPExceller\Style;
 
+use PHPExceller\Style\PHPExceller_Style_GroupedConditional;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\PHPExceller_Style_IconSet_CFIcon;
+use PHPExceller\Style\PHPExceller_Style_IconSet;
+
 /**
  * PHPExceller
  *
