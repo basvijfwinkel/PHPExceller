@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\PHPExceller_Calculation;
+
 /**
  * PHPExceller_Calculation_Token_Stack
  *

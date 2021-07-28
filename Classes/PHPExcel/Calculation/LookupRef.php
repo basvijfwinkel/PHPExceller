@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+
 /** PHPExceller root directory */
 if (!defined('PHPEXCELLER_ROOT')) {
     /**

@@ -1,6 +1,7 @@
 <?php
 namespace PHPExceller\CachedObjectStorage;
 
+use PHPExceller\PHPExceller_Cell;
 /**
  * PHPExceller_CachedObjectStorage_Igbinary
  *

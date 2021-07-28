@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\Reader\PHPExceller_Reader_Exception;
+
 /**
  * PHPExceller_IOFactory
  *

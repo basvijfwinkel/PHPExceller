@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_NamedRange
  *

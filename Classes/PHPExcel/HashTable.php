@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\PHPExceller_IComparable;
+
 /**
  * PHPExceller_HashTable
  *

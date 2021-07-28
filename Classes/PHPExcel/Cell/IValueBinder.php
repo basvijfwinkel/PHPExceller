@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Cell;
 
+use PHPExceller\PHPExceller_Cell;
+
 /**
  * PHPExceller
  *

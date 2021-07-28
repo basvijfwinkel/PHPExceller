@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Cell;
 
+use PHPExceller\Cell\PHPExceller_Cell_DefaultValueBinder;
+use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+
 /**
  * PHPExceller_Cell_DataType
  *

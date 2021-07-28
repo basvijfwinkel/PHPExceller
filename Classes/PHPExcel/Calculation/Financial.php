@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
+
 /** FINANCIAL_MAX_ITERATIONS */
 define('FINANCIAL_MAX_ITERATIONS', 128);
 

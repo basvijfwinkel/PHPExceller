@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
 /**
  * PHPExceller_Calculation_MathTrig
  *

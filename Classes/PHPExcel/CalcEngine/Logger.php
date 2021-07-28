@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\CalcEngine;
 
+use PHPExceller\CalcEngine\PHPExceller_CalcEngine_CyclicReferenceStack;
+
 /**
  * PHPExceller_CalcEngine_Logger
  *

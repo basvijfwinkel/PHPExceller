@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\PHPExceller_Calculation_Statistical;
+use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
+
 /**
  * PHPExceller_Calculation_Database
  *
@@ -143,7 +147,6 @@ class PHPExceller_Calculation_Database
         foreach ($database as $row) {
             $colData[] = $row[$field];
         }
-        
         return $colData;
     }
 

@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Calculation_Exception
  *

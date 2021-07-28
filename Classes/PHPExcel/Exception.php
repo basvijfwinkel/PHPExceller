@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller;
 
+use Exception;
+
 /**
  * PHPExceller
  *

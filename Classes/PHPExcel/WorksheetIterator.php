@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller;
 
+use Iterator;
+use PHPExceller;
+
 /**
  * PHPExceller_WorksheetIterator
  *

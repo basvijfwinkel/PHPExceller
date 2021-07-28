@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\RichText\PHPExceller_RichText_Run;
+use PHPExceller\Cell\PHPExceller_Cell_DataType;
+use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
+use PHPExceller\RichText\PHPExceller_RichText_TextElement;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_RichText
  *

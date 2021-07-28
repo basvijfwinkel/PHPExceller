@@ -1,6 +1,34 @@
 <?php
 namespace PHPExceller;
 
+use ArrayObject;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\PHPExceller_CachedObjectStorageFactory;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_PageSetup;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_PageMargins;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_HeaderFooter;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_SheetView;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_Protection;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_RowDimension;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnDimension;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter;
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\PHPExceller_Shared_String;
+use PHPExceller\PHPExceller_Exception;
+use PHPExceller\PHPExceller_Chart;
+use PHPExceller\PHPExceller_Shared_Font;
+use PHPExceller\PHPExceller_Style_NumberFormat;
+use PHPExceller\PHPExceller_ReferenceHelper;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_SheetView;
+use PHPExceller\Cell\PHPExceller_Cell_DataType;
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\Style\PHPExceller_Style_Conditional;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_RowIterator;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnIterator;
+
 /**
  * PHPExceller_Worksheet
  *
@@ -317,7 +345,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
     * @var string
     */
     private $codeName = null;
-    
+
     /**
      * Create a new worksheet
      *
@@ -1181,8 +1209,8 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
         $cell = $this->cellCollection->addCacheData(
             $pCoordinate,
             new PHPExceller_Cell(
-                NULL, 
-                PHPExceller_Cell_DataType::TYPE_NULL, 
+                NULL,
+                PHPExceller_Cell_DataType::TYPE_NULL,
                 $this
             )
         );
@@ -1423,7 +1451,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
      * @return void
      */
     public function removeConditionalStyles($pCoordinate = 'A1')
-    {        
+    {
         if (isset($this->conditionalStylesCollection[$pCoordinate]))
         {
             $conditions = $this->conditionalStylesCollection[$pCoordinate];
@@ -1434,9 +1462,9 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
             unset($this->conditionalStylesCollection[$pCoordinate]);
         }
     }
-    
+
     public function removeConditionalStyle($pCoordinate = 'A1', $hashCode)
-    {        
+    {
         if (isset($this->conditionalStylesCollection[$pCoordinate]))
         {
             $conditions = $this->conditionalStylesCollection[$pCoordinate];
@@ -1459,7 +1487,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
             }
         }
     }
-    
+
     public function updateConditionalStyles($oldCoordinates,$newCoordinates)
     {
         if (isset($this->conditionalStylesCollection[$oldCoordinates]))
@@ -1497,7 +1525,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
     {
         $this->conditionalStylesCollection[strtoupper($pCoordinate)] = $pValue;
     }
-    
+
     public function addConditionalStyle($pCoordinate = 'A1', $pValue)
     {
         if (isset($this->conditionalStylesCollection[$pCoordinate]))
@@ -1510,7 +1538,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
         {
             $this->conditionalStylesCollection[$pCoordinate] = array($pValue);
         }
-    }    
+    }
 
     /**
      * Get style for cell by using numeric cell coordinates
@@ -1524,7 +1552,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
     public function getStyleByColumnAndRow($pColumn = 0, $pRow = 1, $pColumn2 = null, $pRow2 = null)
     {
         if (!is_null($pColumn2) && !is_null($pRow2)) {
-            $cellRange = PHPExceller_Cell::stringFromColumnIndex($pColumn) . $pRow . ':' . 
+            $cellRange = PHPExceller_Cell::stringFromColumnIndex($pColumn) . $pRow . ':' .
                 PHPExceller_Cell::stringFromColumnIndex($pColumn2) . $pRow2;
             return $this->getStyle($cellRange);
         }
@@ -2906,7 +2934,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
     */
     public function setCodeName($pValue=null){
         // Is this a 'rename' or not?
-        if ($this->getCodeName() == $pValue) 
+        if ($this->getCodeName() == $pValue)
         {
             // nothing to do here
             return;

@@ -1,7 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-require_once PHPExceller_ROOT . 'PHPExceller/Shared/trend/trendClass.php';
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Shared\trendClass;
 
 
 /** LOG_GAMMA_X_MAX_VALUE */

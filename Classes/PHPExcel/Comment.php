@@ -1,6 +1,11 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\Style\PHPExceller_Style_Alignment;
+
 /**
  * PHPExceller_Comment
  *

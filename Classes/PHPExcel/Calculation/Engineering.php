@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
+
 /** EULER */
 define('EULER', 2.71828182845904523536);
 

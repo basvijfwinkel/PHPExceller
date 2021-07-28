@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\Shared\PHPExceller_Shared_ZipArchive;
+use PHPExceller\PHPExceller_CachedObjectStorageFactory;
+
 /**
  * PHPExceller_Settings
  *

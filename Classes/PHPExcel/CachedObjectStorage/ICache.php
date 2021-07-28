@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\CachedObjectStorage;
 
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_CachedObjectStorage_ICache
  *

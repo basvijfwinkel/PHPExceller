@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Cell;
 
+use  PHPExceller\Cell\PHPExceller_Cell_DefaultValueBinder;
+use  PHPExceller\Cell\PHPExceller_Cell_IValueBinder;
+use  PHPExceller\PHPExceller_Cell;
+use  PHPExceller\Cell\PHPExceller_Cell_DataType;
+use  PHPExceller\PHPExceller_Calculation;
+use  PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use  PHPExceller\Shared\PHPExceller_Shared_String;
+
 /**
  * PHPExceller_Cell_AdvancedValueBinder
  *

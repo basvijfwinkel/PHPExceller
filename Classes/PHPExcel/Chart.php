@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\Chart\PHPExceller_Chart_Title;
+use PHPExceller\Chart\PHPExceller_Chart_Legend;
+use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
+use PHPExceller\Chart\PHPExceller_Chart_Axis;
+use PHPExceller\Chart\PHPExceller_Chart_GridLines;
+use PHPExceller\Chart\PHPExceller_Chart_Axis;
+use PHPExceller\Chart\PHPExceller_Chart_Renderer_jpgraph;
+
 /**
  * PHPExceller_Chart
  *

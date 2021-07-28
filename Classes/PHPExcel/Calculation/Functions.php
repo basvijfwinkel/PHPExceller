@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
 
 /** MAX_VALUE */
 define('MAX_VALUE', 1.2e308);

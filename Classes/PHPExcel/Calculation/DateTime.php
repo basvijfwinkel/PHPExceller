@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Shared\PHPExceller_Shared_Date;
+
 /**
  * PHPExceller_Calculation_DateTime
  *

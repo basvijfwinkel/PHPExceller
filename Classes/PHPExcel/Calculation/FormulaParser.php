@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Calculation;
 
+use PHPExceller\Calculation\PHPExceller_Calculation_FormulaToken;
+use PHPExceller\Calculation\PHPExceller_Calculation_FormulaParser;
+use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+
 /*
 PARTLY BASED ON:
     Copyright (c) 2007 E. W. Bachtal, Inc.

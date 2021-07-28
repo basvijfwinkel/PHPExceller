@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller;
 
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_ReferenceHelper (Singleton)
  *
@@ -173,7 +176,7 @@ class PHPExceller_ReferenceHelper
                 //    Otherwise update any affected breaks by inserting a new break at the appropriate point
                 //        and removing the old affected break
                 $newReference = $this->updateCellReference($key, $pBefore, $pNumCols, $pNumRows);
-                if ($key != $newReference) 
+                if ($key != $newReference)
                 {
                     $pSheet->setBreak($newReference, $value);
                     $pSheet->setBreak($key, PHPExceller_Worksheet::BREAK_NONE);
@@ -391,10 +394,10 @@ class PHPExceller_ReferenceHelper
 
         // 1. Clear column strips if we are removing columns
         if ($pNumCols < 0 && $beforeColumnIndex - 2 + $pNumCols > 0) {
-            
+
             for ($i = 1; $i <= $highestRow - 1; ++$i) {
                 for ($j = $beforeColumnIndex - 1 + $pNumCols; $j <= $beforeColumnIndex - 2; ++$j) {
-                    
+
                     $coordinate = PHPExceller_Cell::stringFromColumnIndex($j) . $i;
                     $pSheet->removeConditionalStyles($coordinate);
                     if ($pSheet->cellExists($coordinate)) {
@@ -428,7 +431,7 @@ class PHPExceller_ReferenceHelper
             $cell = $pSheet->getCell($cellID);
             $cellIndex = PHPExceller_Cell::columnIndexFromString($cell->getColumn());
 
-            if ($cellIndex-1 + $pNumCols < 0) 
+            if ($cellIndex-1 + $pNumCols < 0)
             {
                 // this cell is not moved
                 continue;
@@ -438,31 +441,31 @@ class PHPExceller_ReferenceHelper
             $newCoordinates = PHPExceller_Cell::stringFromColumnIndex($cellIndex-1 + $pNumCols) . ($cell->getRow() + $pNumRows);
             // Old coordinates
             $oldCoordinates = $cell->getColumn().$cell->getRow();
-            
+
             // Should the cell be updated? Move value and cellXf index from one cell to another.
             if (($cellIndex >= $beforeColumnIndex) &&
-                ($cell->getRow() >= $beforeRow)) 
+                ($cell->getRow() >= $beforeRow))
             {
                 // Update cell styles
                 $pSheet->getCell($newCoordinates)->setXfIndex($cell->getXfIndex());
 
                 // Insert this cell at its new location
-                if ($cell->getDataType() == PHPExceller_Cell_DataType::TYPE_FORMULA) 
+                if ($cell->getDataType() == PHPExceller_Cell_DataType::TYPE_FORMULA)
                 {
                     // Formula should be adjusted
                     $pSheet->getCell($newCoordinates)
                            ->setValue($this->updateFormulaReferences($cell->getValue(),
                                                $pBefore, $pNumCols, $pNumRows, $pSheet->getTitle()));
-                } 
-                else 
+                }
+                else
                 {
                     // Formula should not be adjusted
                     $pSheet->getCell($newCoordinates)->setValue($cell->getValue());
                 }
-                
+
                 // update the conditional styles data
                 $pSheet->updateConditionalStyles($oldCoordinates, $newCoordinates);
-                
+
                 // Clear the original cell
                 $pSheet->getCellCacheController()->deleteCacheData($cellID);
 
@@ -482,10 +485,10 @@ class PHPExceller_ReferenceHelper
         $highestColumn    = $pSheet->getHighestColumn();
         $highestRow    = $pSheet->getHighestRow();
 
-        if ($pNumCols > 0 && $beforeColumnIndex - 2 > 0) 
+        if ($pNumCols > 0 && $beforeColumnIndex - 2 > 0)
         {
             for ($i = $beforeRow; $i <= $highestRow - 1; ++$i) {
-                
+
                 // Style
                 $coordinate = PHPExceller_Cell::stringFromColumnIndex( $beforeColumnIndex - 2 ) . $i;
                 if ($pSheet->cellExists($coordinate)) {
@@ -496,7 +499,7 @@ class PHPExceller_ReferenceHelper
                         $pSheet->getCellByColumnAndRow($j, $i)->setXfIndex($xfIndex);
                         if ($conditionalStyles) {
                             $cloned = array();
-                            foreach ($conditionalStyles as $conditionalStyle) 
+                            foreach ($conditionalStyles as $conditionalStyle)
                             {
                                 $cloned[] = clone $conditionalStyle;  // TODO : GroupedConditionals need to be updated seperately
                             }
@@ -508,7 +511,7 @@ class PHPExceller_ReferenceHelper
             }
         }
 
-        if ($pNumRows > 0 && $beforeRow - 1 > 0) 
+        if ($pNumRows > 0 && $beforeRow - 1 > 0)
         {
             for ($i = $beforeColumnIndex - 1; $i <= PHPExceller_Cell::columnIndexFromString($highestColumn) - 1; ++$i) {
                 // Style
@@ -636,7 +639,7 @@ class PHPExceller_ReferenceHelper
         // Update workbook: named ranges
         if (count($pSheet->getParent()->getNamedRanges()) > 0) {
             foreach ($pSheet->getParent()->getNamedRanges() as $namedRange) {
-                if ($namedRange->getWorksheet()->getHashCode() == $pSheet->getHashCode()) 
+                if ($namedRange->getWorksheet()->getHashCode() == $pSheet->getHashCode())
                  {
                     $namedRange->setRange($this->updateCellReference($namedRange->getRange(), $pBefore, $pNumCols, $pNumRows));
                 }
