@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\Reader\Exception;
 
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
@@ -38,7 +38,7 @@ $GLOBALS['_OLE_INSTANCES'] = array();
 * @category   PHPExceller
 * @package    PHPExceller_Shared_OLE
 */
-class PHPExceller_Shared_OLE
+class OLE
 {
     const OLE_PPS_TYPE_ROOT   =      5;
     const OLE_PPS_TYPE_DIR    =      1;

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Shared\JAMA\Matrix;
+use PHPExceller\Calculation\Functions;
 /**
  * PHPExceller_Calculation_MathTrig
  *
@@ -28,7 +28,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_MathTrig
+class MathTrig
 {
     //
     //    Private method to return an array of the factors of the input value

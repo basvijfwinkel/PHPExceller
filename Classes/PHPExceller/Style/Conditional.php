@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Conditional;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Style;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_DataBar;
-use PHPExceller\Style\PHPExceller_Style_ColorScale;
-use PHPExceller\Style\PHPExceller_Style_IconSet;
+use PHPExceller\Style\Conditional;
+use PHPExceller\IComparable;
+use PHPExceller\Style;
+use PHPExceller\Exception;
+use PHPExceller\Style\DataBar;
+use PHPExceller\Style\ColorScale;
+use PHPExceller\Style\IconSet;
 
 /**
  * PHPExceller
@@ -43,7 +43,7 @@ use PHPExceller\Style\PHPExceller_Style_IconSet;
  * @package    PHPExceller_Style
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Style_Conditional implements PHPExceller_IComparable
+class Conditional implements IComparable
 {
     /* Condition types */
     const CONDITION_NONE                    = 'none';

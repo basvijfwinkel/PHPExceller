@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\Calculation\Exception;
 
 /**
  * PHPExceller_Calculation_Function
@@ -28,7 +28,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Function
+class Function
 {
     /* Function categories */
     const CATEGORY_CUBE                 = 'Cube';

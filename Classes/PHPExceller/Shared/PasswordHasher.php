@@ -35,7 +35,7 @@ namespace PHPExceller\Shared;
  * @package    PHPExceller_Shared
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Shared_PasswordHasher
+class PasswordHasher
 {
     /**
      * Create a password hash from a given string.

@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Chart;
 
-use PHPExceller\Chart\PHPExceller_Chart_DataSeriesValues;
+use PHPExceller\Chart\DataSeriesValues;
 
 /**
  * PHPExceller
@@ -36,7 +36,7 @@ use PHPExceller\Chart\PHPExceller_Chart_DataSeriesValues;
  * @package     PHPExceller_Chart
  * @copyright   Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Chart_DataSeries
+class DataSeries
 {
     const TYPE_BARCHART        = 'barChart';
     const TYPE_BARCHART_3D     = 'bar3DChart';

@@ -1,12 +1,12 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Comment;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Worksheet;
+use PHPExceller\Comment;
 use PHPExceller\PHPExceller;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Writer\Exception;
 
 /**
  * PHPExceller_Writer_Excel2007_ContentTypes
@@ -33,7 +33,7 @@ use PHPExceller\Writer\PHPExceller_Writer_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_ContentTypes extends PHPExceller_Writer_Excel2007_WriterPart
+class ContentTypes extends WriterPart
 {
     /**
      * Write content types to XML format

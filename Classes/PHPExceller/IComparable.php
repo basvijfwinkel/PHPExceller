@@ -24,7 +24,7 @@ namespace PHPExceller;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-interface PHPExceller_IComparable
+interface IComparable
 {
     /**
      * Get hash code

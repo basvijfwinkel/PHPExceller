@@ -1,15 +1,15 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\PHPExceller_Chart;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\Chart\PHPExceller_Chart_Title;
-use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
-use PHPExceller\Chart\PHPExceller_Chart_Title;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Chart\PHPExceller_Chart_GridLines;
-use PHPExceller\Chart\PHPExceller_Chart_DataSeries;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Chart;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Chart\Title;
+use PHPExceller\Chart\PlotArea;
+use PHPExceller\Chart\Title;
+use PHPExceller\Worksheet;
+use PHPExceller\Chart\GridLines;
+use PHPExceller\Chart\DataSeries;
 
 /**
  * PHPExceller
@@ -36,7 +36,7 @@ use PHPExceller\Chart\PHPExceller_Chart_DataSeries;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##,##DATE##
  */
-class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_WriterPart
+class Chart extends WriterPart
 {
     protected $calculateCellValues;
 

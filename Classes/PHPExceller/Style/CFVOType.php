@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_CFVOType;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\CFVOType;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller
@@ -40,7 +40,7 @@ use PHPExceller\PHPExceller_Exception;
  * @author    Bas Vijfwinkel
  * <p>Note : I haven't found enough examples to test and implement the full specification of this object</p>
  */
-class PHPExceller_Style_CFVOType
+class CFVOType
 {
     const NUM        = 'num';
     const PERCENT    = 'percent';

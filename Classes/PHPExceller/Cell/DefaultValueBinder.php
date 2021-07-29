@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Cell;
 
-use PHPExcel\Cell\PHPExceller_Cell_IValueBinder;
-use PHPExceller\Cell\PHPExceller_Cell_DataType;
-use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExcel\Cell\IValueBinder;
+use PHPExceller\Cell\DataType;
+use PHPExceller\Shared\String;
 
 /**
  * PHPExceller_Cell_DefaultValueBinder
@@ -30,7 +30,7 @@ use PHPExceller\Shared\PHPExceller_Shared_String;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Cell_DefaultValueBinder implements PHPExceller_Cell_IValueBinder
+class DefaultValueBinder implements IValueBinder
 {
     /**
      * Bind value to a cell

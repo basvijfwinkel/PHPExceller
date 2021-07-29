@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet\AutoFilter\Column;
 
-use PHPExceller\Worksheet\AutoFilter\PHPExceller_Worksheet_AutoFilter_Column;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Worksheet\AutoFilter\Column;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_AutoFilter_Column_Rule
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_AutoFilter_Column_Rule
+class Rule
 {
     const AUTOFILTER_RULETYPE_FILTER        = 'filter';
     const AUTOFILTER_RULETYPE_DATEGROUP     = 'dateGroupItem';

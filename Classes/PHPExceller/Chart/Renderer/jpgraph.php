@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Chart\Renderer;
 
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
-use PHPExceller\PHPExceller_Settings;
+use PHPExceller\Style\NumberFormat;
+use PHPExceller\Settings;
 
 /**
  * PHPExceller_Chart_Renderer_jpgraph
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_Settings;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Chart_Renderer_jpgraph
+class jpgraph
 {
     private static $width    = 640;
 

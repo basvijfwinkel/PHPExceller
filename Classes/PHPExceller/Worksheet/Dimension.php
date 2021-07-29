@@ -26,7 +26,7 @@ namespace PHPExceller\Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-abstract class PHPExceller_Worksheet_Dimension
+abstract class Dimension
 {
     /**
      * Visible?

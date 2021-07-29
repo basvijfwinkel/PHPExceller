@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\Shared\PHPExceller_Shared_ZipArchive;
-use PHPExceller\PHPExceller_CachedObjectStorageFactory;
+use PHPExceller\Shared\ZipArchive;
+use PHPExceller\CachedObjectStorageFactory;
 
 /**
  * PHPExceller_Settings
@@ -29,11 +29,11 @@ use PHPExceller\PHPExceller_CachedObjectStorageFactory;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Settings
+class Settings
 {
     /**    constants */
     /**    Available Zip library classes */
-    const PCLZIP     = 'PHPExceller_Shared_ZipArchive';
+    const PCLZIP     = 'PHPExceller\Shared\ZipArchive';
     const ZIPARCHIVE = 'ZipArchive';
 
     /**    Optional Chart Rendering libraries */

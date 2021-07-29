@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_Memory;
+use PHPExceller\CachedObjectStorage\Memory;
 
 /**
  * PHPExceller_CachedObjectStorageFactory
@@ -28,7 +28,7 @@ use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_Memory;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_CachedObjectStorageFactory
+class CachedObjectStorageFactory
 {
     const cache_in_memory               = 'Memory';
 

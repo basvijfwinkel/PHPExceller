@@ -37,7 +37,7 @@ use PHPExceller\PHPExceller_Cell;
  * @package    PHPExceller_Cell
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-interface PHPExceller_Cell_IValueBinder
+interface IValueBinder
 {
     /**
      * Bind value to a cell

@@ -1,17 +1,17 @@
 <?php
-namespace PHPExceller\Writer;
+namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\Excel2007\WriterPart;
 use PHPExceller\PHPExceller;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\Shared\PHPExceller_Shared_String;
-use PHPExceller\Style\PHPExceller_Style_Conditional;
-use PHPExceller\Writer\PHPExceller_Writer_Excel2007_Worksheet;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Writer\Exception;
+use PHPExceller\Worksheet;
+use PHPExceller\Cell;
+use PHPExceller\Shared\String;
+use PHPExceller\Style\Conditional;
+use PHPExceller\Writer\Excel2007\Worksheet;
+use PHPExceller\Worksheet\AutoFilter\Column;
+use PHPExceller\Worksheet\AutoFilter\Column\Rule;
 
 /**
  * PHPExceller
@@ -47,7 +47,7 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
  * @package    PHPExceller_Writer_Excel2007
  * @copyright  Copyright (c) 2006 - 2014 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Writer_Excel2007_Worksheet extends PHPExceller_Writer_Excel2007_WriterPart
+class Worksheet extends WriterPart
 {
     const EXTLST_CONDITIONALFORMATTINGID = 14;
 

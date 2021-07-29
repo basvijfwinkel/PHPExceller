@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Calculation\DateTime;
 
 /** FINANCIAL_MAX_ITERATIONS */
 define('FINANCIAL_MAX_ITERATIONS', 128);
@@ -35,7 +35,7 @@ define('FINANCIAL_PRECISION', 1.0e-08);
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Financial
+class Financial
 {
     /**
      * isLastDayOfMonth

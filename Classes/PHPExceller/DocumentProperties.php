@@ -26,7 +26,7 @@ namespace PHPExceller;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_DocumentProperties
+class DocumentProperties
 {
     /** constants */
     const PROPERTY_TYPE_BOOLEAN = 'b';

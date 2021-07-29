@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\IComparable;
 
 /**
  * PHPExceller_HashTable
@@ -28,7 +28,7 @@ use PHPExceller\PHPExceller_IComparable;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_HashTable
+class HashTable
 {
     /**
      * HashTable elements

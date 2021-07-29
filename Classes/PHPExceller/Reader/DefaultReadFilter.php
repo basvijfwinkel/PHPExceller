@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Reader;
 
-use PHPExceller\Reader\PHPExceller_Reader_IReadFilter;
+use PHPExceller\Reader\IReadFilter;
 
 /**
  * PHPExceller_Reader_DefaultReadFilter
@@ -28,7 +28,7 @@ use PHPExceller\Reader\PHPExceller_Reader_IReadFilter;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Reader_DefaultReadFilter implements PHPExceller_Reader_IReadFilter
+class DefaultReadFilter implements IReadFilter
 {
     /**
      * Should this cell be read?

@@ -1,14 +1,14 @@
 <?php
 namespace PHPExceller\Reader\Excel2007;
 
-use PHPExceller\Style\PHPExceller_Style_Color;
-use PHPExceller\Chart\PHPExceller_Chart_Layout;
-use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
-use PHPExceller\Chart\PHPExceller_Chart_Legend;
-use PHPExceller\PHPExceller_Chart;
-use PHPExceller\Chart\PHPExceller_Chart_Title;
-use PHPExceller\Chart\PHPExceller_Chart_DataSeries;
-use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Style\Color;
+use PHPExceller\Chart\Layout;
+use PHPExceller\Chart\PlotArea;
+use PHPExceller\Chart\Legend;
+use PHPExceller\Chart;
+use PHPExceller\Chart\Title;
+use PHPExceller\Chart\DataSeries;
+use PHPExceller\RichText;
 
 /**
  * PHPExceller
@@ -43,7 +43,7 @@ use PHPExceller\PHPExceller_RichText;
  * @package        PHPExceller_Reader_Excel2007
  * @copyright    Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Reader_Excel2007_Chart
+class Chart
 {
     private static function getAttribute($component, $name, $format)
     {

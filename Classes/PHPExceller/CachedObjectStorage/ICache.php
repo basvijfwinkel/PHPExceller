@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\CachedObjectStorage;
 
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Cell;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_CachedObjectStorage_ICache
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-interface PHPExceller_CachedObjectStorage_ICache
+interface ICache
 {
     /**
      * Add or Update a cell in cache identified by coordinate address

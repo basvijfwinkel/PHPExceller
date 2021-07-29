@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_Font;
-use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExceller\Exception;
+use PHPExceller\Style\Font;
+use PHPExceller\Shared\String;
 
 /**
  * PHPExceller
@@ -39,7 +39,7 @@ use PHPExceller\Shared\PHPExceller_Shared_String;
  * @package    PHPExceller_Shared
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Shared_Font
+class Font
 {
     /* Methods for resolving autosize value */
     const AUTOSIZE_METHOD_APPROX    = 'approx';

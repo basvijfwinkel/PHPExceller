@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Style_Protection
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Style_Protection extends PHPExceller_Style_Supervisor implements PHPExceller_IComparable
+class Protection extends Supervisor implements IComparable
 {
     /** Protection styles */
     const PROTECTION_INHERIT      = 'inherit';

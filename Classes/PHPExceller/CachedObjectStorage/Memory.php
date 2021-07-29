@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\CachedObjectStorage;
 
-use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_CacheBase;
-use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_ICache;
+use PHPExceller\CachedObjectStorage\CacheBase;
+use PHPExceller\CachedObjectStorage\ICache;
 use PHPExceller\PHPExceller_Cell;
 use PHPExceller\PHPExceller_Worksheet;
 
@@ -31,7 +31,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_CachedObjectStorage_Memory extends PHPExceller_CachedObjectStorage_CacheBase implements PHPExceller_CachedObjectStorage_ICache
+class Memory extends PHPExceller_CachedObjectStorage_CacheBase implements PHPExceller_CachedObjectStorage_ICache
 {
     /**
      * Dummy method callable from CacheBase, but unused by Memory cache

@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_Dimension;
+use PHPExceller\Worksheet\Dimension;
 
 /**
  * PHPExceller_Worksheet_RowDimension
@@ -28,7 +28,7 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_Dimension;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_RowDimension extends PHPExceller_Worksheet_Dimension
+class RowDimension extends Dimension
 {
     /**
      * Row index

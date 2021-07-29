@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\RichText;
 
-use PHPExceller\RichText\PHPExceller_RichText_TextElement;
-use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
-use PHPExceller\Style\PHPExceller_Style_Font;
+use PHPExceller\RichText\TextElement;
+use PHPExceller\RichText\ITextElement;
+use PHPExceller\Style\Font;
 
 /**
  * PHPExceller_RichText_Run
@@ -28,7 +28,7 @@ use PHPExceller\Style\PHPExceller_Style_Font;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_RichText_Run extends PHPExceller_RichText_TextElement implements PHPExceller_RichText_ITextElement
+class Run extends TextElement implements ITextElement
 {
     /**
      * Font

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Reader;
 
-use PHPExceller\Reader\PHPExceller_Reader_IReader;
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\Reader\IReader;
+use PHPExceller\Reader\Exception;
 
 /**
  * PHPExceller_Reader_Abstract
@@ -29,7 +29,7 @@ use PHPExceller\Reader\PHPExceller_Reader_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-abstract class PHPExceller_Reader_Abstract implements PHPExceller_Reader_IReader
+abstract class Abstract implements IReader
 {
     /**
      * Read data only?

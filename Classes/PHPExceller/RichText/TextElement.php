@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\RichText;
 
-use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
+use PHPExceller\RichText\ITextElement;
 
 /**
  * PHPExceller_RichText_TextElement
@@ -26,7 +26,7 @@ use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_RichText_TextElement implements PHPExceller_RichText_ITextElement
+class TextElement implements ITextElement
 {
     /**
      * Text

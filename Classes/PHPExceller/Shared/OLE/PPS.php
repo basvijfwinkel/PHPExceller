@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared\OLE;
 
-use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE;
+use PHPExceller\Shared\OLE;
 
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
@@ -30,7 +30,7 @@ use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE;
 * @category PHPExceller
 * @package  PHPExceller_Shared_OLE
 */
-class PHPExceller_Shared_OLE_PPS
+class PPS
 {
     /**
     * The PPS index

@@ -26,7 +26,7 @@ namespace PHPExceller\CalcEngine;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_CalcEngine_CyclicReferenceStack
+class CyclicReferenceStack
 {
     /**
      *  The call stack for calculated cells

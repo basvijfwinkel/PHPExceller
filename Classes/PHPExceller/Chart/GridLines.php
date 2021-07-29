@@ -3,7 +3,7 @@ namespace PHPExceller\Chart;
 
 use HPExceller\Chart\ChartProperties;
 
-class PHPExceller_Chart_GridLines extends ChartProperties
+class GridLines extends ChartProperties
 {
 
   /**

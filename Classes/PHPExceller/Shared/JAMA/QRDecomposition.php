@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Shared\JAMA;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
-use PHPExceller\Shared\JAMA\PHPExceller_Shared_JAMA_Matrix;
+use PHPExceller\Calculation\Exception;
+use PHPExceller\Shared\JAMA\Matrix;
 
 
 /**
@@ -22,7 +22,7 @@ use PHPExceller\Shared\JAMA\PHPExceller_Shared_JAMA_Matrix;
  *    @license PHP v3.0
  *    @version 1.1
  */
-class PHPExceller_Shared_JAMA_QRDecomposition
+class QRDecomposition
 {
     const MATRIX_RANK_EXCEPTION  = "Can only perform operation on full-rank matrix.";
 

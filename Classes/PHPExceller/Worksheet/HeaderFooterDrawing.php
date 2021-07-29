@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_Drawing;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Worksheet\Drawing;
+use PHPExceller\IComparable;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_HeaderFooterDrawing
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_HeaderFooterDrawing extends PHPExceller_Worksheet_Drawing implements PHPExceller_IComparable
+class HeaderFooterDrawing extends Drawing implements IComparable
 {
     /**
      * Path

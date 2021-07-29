@@ -26,7 +26,7 @@ namespace PHPExceller\Shared\Escher\DgContainer;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DgContainer_SpgrContainer
+class SpgrContainer
 {
     /**
      * Parent Shape Group Container

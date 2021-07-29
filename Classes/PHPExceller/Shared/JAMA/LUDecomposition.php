@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Shared\JAMA;
 
-use PHPExceller\Shared\JAMA\PHPExceller_Shared_JAMA_Matrix;
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\Shared\JAMA\Matrix;
+use PHPExceller\Calculation\Exception;
 
 /**
  *    @package JAMA
@@ -23,7 +23,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
  *    @version 1.1
  *    @license PHP v3.0
  */
-class PHPExceller_Shared_JAMA_LUDecomposition
+class LUDecomposition
 {
     const MATRIX_SINGULAR_EXCEPTION    = "Can only perform operation on singular matrix.";
     const MATRIX_SQUARE_EXCEPTION      = "Mismatched Row dimension";

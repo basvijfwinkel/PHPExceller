@@ -1,21 +1,11 @@
 <?php
 namespace PHPExceller\Shared\JAMA;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\Calculation\Exception;
 
 /**
  * @package JAMA
  */
-
-/** PHPExceller root directory */
-if (!defined('PHPEXCELLER_ROOT')) {
-    /**
-     * @ignore
-     */
-    define('PHPEXCELLER_ROOT', dirname(__FILE__) . '/../../../');
-    require(PHPEXCELLER_ROOT . 'PHPExceller/Autoloader.php');
-}
-
 
 /*
  *    Matrix class
@@ -28,7 +18,7 @@ if (!defined('PHPEXCELLER_ROOT')) {
  *    @license PHP v3.0
  *    @see http://math.nist.gov/javanumerics/jama/
  */
-class PHPExceller_Shared_JAMA_Matrix
+class Matrix
 {
     const POLYMORPHIC_ARGUMENT_EXCEPTION = "Invalid argument pattern for polymorphic function.";
     const ARGUMENT_TYPE_EXCEPTION        = "Invalid argument type.";

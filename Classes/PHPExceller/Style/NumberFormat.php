@@ -1,13 +1,12 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
-use PHPExceller\Shared\PHPExceller_Shared_Date;
-use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
-use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Exception;
+use PHPExceller\Shared\Date;
+use PHPExceller\Calculation\MathTrig;
+use PHPExceller\Shared\String;
 
 /**
  * PHPExceller_Style_NumberFormat
@@ -34,7 +33,7 @@ use PHPExceller\Shared\PHPExceller_Shared_String;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Style_NumberFormat extends PHPExceller_Style_Supervisor implements PHPExceller_IComparable
+class NumberFormat extends Supervisor implements IComparable
 {
     /* Pre-defined formats */
     const FORMAT_GENERAL                 = 'General';

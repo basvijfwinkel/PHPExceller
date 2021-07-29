@@ -1,12 +1,12 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Style;
-use PHPExceller\PHPExceller_DocumentProperties;
-use PHPExceller\PHPExceller_DocumentSecurity;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Calculation;
+use PHPExceller\Worksheet;
+use PHPExceller\Style;
+use PHPExceller\DocumentProperties;
+use PHPExceller\DocumentSecurity;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller

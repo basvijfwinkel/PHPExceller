@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet\Drawing;
 
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\IComparable;
+use PHPExceller\Style\Color;
 
 /**
  * PHPExceller_Worksheet_Drawing_Shadow
@@ -29,7 +29,7 @@ use PHPExceller\Style\PHPExceller_Style_Color;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_Drawing_Shadow implements PHPExceller_IComparable
+class Shadow implements IComparable
 {
     /* Shadow alignment */
     const SHADOW_BOTTOM       = 'b';

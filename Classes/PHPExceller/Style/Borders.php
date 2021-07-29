@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_Borders;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Style\Borders;
+use PHPExceller\Exception;
 /**
  * PHPExceller_Style_Borders
  *
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Style_Borders extends PHPExceller_Style_Supervisor implements PHPExceller_IComparable
+class Borders extends Supervisor implements IComparable
 {
     /* Diagonal directions */
     const DIAGONAL_NONE = 0;

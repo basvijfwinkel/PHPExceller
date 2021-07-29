@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\Functions;
 use PHPExceller\Shared\trendClass;
 
 
@@ -42,7 +42,7 @@ define('SQRT2PI', 2.5066282746310005024157652848110452530069867406099);
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Statistical
+class Statistical
 {
     private static function checkTrendArrays(&$array1, &$array2)
     {

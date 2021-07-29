@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared\Escher\DgContainer\SpgrContainer;
 
-use PHPExceller\Shared\PHPExceller_Shared_Escher_DgContainer_SpgrContainer;
+use PHPExceller\Shared\Escher\DgContainer\SpgrContainer;
 
 /**
  * PHPExceller_Shared_Escher_DgContainer_SpgrContainer_SpContainer
@@ -28,7 +28,7 @@ use PHPExceller\Shared\PHPExceller_Shared_Escher_DgContainer_SpgrContainer;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DgContainer_SpgrContainer_SpContainer
+class SpContainer
 {
     /**
      * Parent Shape Group Container

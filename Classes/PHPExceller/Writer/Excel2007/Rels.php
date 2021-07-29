@@ -1,11 +1,11 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Shared\XMLWriter;
 use PHPExceller\PHPExceller;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Worksheet;
+use PHPExceller\Writer\Exception;
 
 /**
  * PHPExceller_Writer_Excel2007_Rels
@@ -32,7 +32,7 @@ use PHPExceller\Writer\PHPExceller_Writer_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_Rels extends PHPExceller_Writer_Excel2007_WriterPart
+class Rels extends WriterPart
 {
     /**
      * Write relationships to XML format

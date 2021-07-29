@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Shared\PHPExceller_Shared_File;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Shared\File;
+use PHPExceller\Writer\Exception;
 
 if (!defined('PCLZIP_TEMPORARY_DIR')) {
     define('PCLZIP_TEMPORARY_DIR', PHPExceller_Shared_File::sys_get_temp_dir() . DIRECTORY_SEPARATOR);
 }
-require_once PHPExceller_ROOT . 'PHPExceller/Shared/PCLZip/pclzip.lib.php';
+use PHPExceller\Shared\PCLZip\PclZip;
 
 /**
  * PHPExceller_Shared_ZipArchive
@@ -34,7 +34,7 @@ require_once PHPExceller_ROOT . 'PHPExceller/Shared/PCLZip/pclzip.lib.php';
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_ZipArchive
+class ZipArchive
 {
 
     /**    constants */

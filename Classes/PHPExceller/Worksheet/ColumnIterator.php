@@ -2,9 +2,9 @@
 namespace PHPExceller\Worksheet;
 
 use Iterator;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\PHPExceller_Cell;
+use PHPExceller\Worksheet;
+use PHPExceller\Exception;
+use PHPExceller\Cell;
 
 /**
  * PHPExceller_Worksheet_ColumnIterator
@@ -31,7 +31,7 @@ use PHPExceller\PHPExceller_Cell;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_ColumnIterator implements Iterator
+class ColumnIterator implements Iterator
 {
     /**
      * PHPExceller_Worksheet to iterate

@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller\Chart;
 
-use PHPExceller\Chart\PHPExceller_Chart_Exception;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Chart\Exception;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Calculation;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_Chart_DataSeriesValues
@@ -32,7 +32,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @version        ##VERSION##, ##DATE##
  */
 
-class PHPExceller_Chart_DataSeriesValues
+class DataSeriesValues
 {
 
     const DATASERIES_TYPE_STRING    = 'String';

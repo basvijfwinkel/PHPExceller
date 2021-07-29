@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Shared\trend;
 
-use PHPExceller\Shared\trend\PHPExceller_Polynomial_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Exponential_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Linear_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Logarithmic_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Polynomial_Best_Fit;
-use PHPExceller\Shared\trend\PHPExceller_Power_Best_Fit;
+use PHPExceller\Shared\trend\PolynomialBestFit;
+use PHPExceller\Shared\trend\BestFit;
+use PHPExceller\Shared\trend\ExponentialBestFit;
+use PHPExceller\Shared\trend\LinearBestFit;
+use PHPExceller\Shared\trend\LogarithmicBestFit;
+use PHPExceller\Shared\trend\PolynomialBestFit;
+use PHPExceller\Shared\trend\PowerBestFit;
 
 /**
  * PHPExceller_trendClass
@@ -105,7 +105,7 @@ class trendClass
             case self::TREND_EXPONENTIAL:
             case self::TREND_POWER:
                 if (!isset(self::$trendCache[$key])) {
-                    $className = 'PHPExceller_'.$trendType.'_Best_Fit';
+                    $className = __NAMESPACE__."\\".$trendType.'BestFit';
                     self::$trendCache[$key] = new $className($yValues, $xValues, $const);
                 }
                 return self::$trendCache[$key];
@@ -124,14 +124,14 @@ class trendClass
                 //    If the request is to determine the best fit regression, then we test each trend line in turn
                 //    Start by generating an instance of each available trend method
                 foreach (self::$trendTypes as $trendMethod) {
-                    $className = 'PHPExceller_'.$trendMethod.'BestFit';
+                    $className = __NAMESPACE__."\\".$trendMethod.'BestFit';
                     $bestFit[$trendMethod] = new $className($yValues, $xValues, $const);
                     $bestFitValue[$trendMethod] = $bestFit[$trendMethod]->getGoodnessOfFit();
                 }
                 if ($trendType != self::TREND_BEST_FIT_NO_POLY) {
                     foreach (self::$trendTypePolynomialOrders as $trendMethod) {
                         $order = substr($trendMethod, -1);
-                        $bestFit[$trendMethod] = new PHPExceller_Polynomial_Best_Fit($order, $yValues, $xValues, $const);
+                        $bestFit[$trendMethod] = new PolynomialBestFit($order, $yValues, $xValues, $const);
                         if ($bestFit[$trendMethod]->getError()) {
                             unset($bestFit[$trendMethod]);
                         } else {

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Style\DataBar;
 
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_DataBar_DataBarAxisPosition;
+use PHPExceller\Exception;
+use PHPExceller\Style\DataBarAxisPosition;
 
 /**
  * PHPExceller
@@ -39,7 +39,7 @@ use PHPExceller\Style\PHPExceller_Style_DataBar_DataBarAxisPosition;
  * @copyright  Copyright (c) 2021 PHPExceller
  * @author    Bas Vijfwinkel
  */
-class PHPExceller_Style_DataBar_DataBarAxisPosition
+class DataBarAxisPosition
 {
     const AUTOMATIC= 'automatic';
     const MIDDLE = 'middle';

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Chart;
 
-use PHPExceller\Chart\PHPExceller_Chart_Layout;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Chart\Layout;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_Chart_PlotArea
@@ -35,10 +35,9 @@ use PHPExceller\PHPExceller_Worksheet;
  * PHPExceller_Chart_PlotArea
  *
  * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2006 - 2014 PHPExceller (http://www.codeplex.com/PHPExceller)
+ * @package     PHPExceller_Chart
  */
-class PHPExceller_Chart_PlotArea
+class PlotArea
 {
     /**
      * PlotArea Layout

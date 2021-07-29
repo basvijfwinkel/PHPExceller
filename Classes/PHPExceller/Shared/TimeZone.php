@@ -2,7 +2,7 @@
 namespace PHPExceller\Shared;
 
 use DateTimeZone;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller
@@ -38,7 +38,7 @@ use PHPExceller\PHPExceller_Exception;
  * @package    PHPExceller_Shared
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Shared_TimeZone
+class TimeZone
 {
     /*
      * Default Timezone used for date/time conversions

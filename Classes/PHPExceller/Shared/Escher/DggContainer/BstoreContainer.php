@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared\DggContainer;
+namespace PHPExceller\Shared\Escher\DggContainer;
 
 /**
  * PHPExceller_Shared_Escher_DggContainer_BstoreContainer
@@ -26,7 +26,7 @@ namespace PHPExceller\Shared\DggContainer;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DggContainer_BstoreContainer
+class BstoreContainer
 {
     /**
      * BLIP Store Entries. Each of them holds one BLIP (Big Large Image or Picture)

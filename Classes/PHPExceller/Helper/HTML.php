@@ -26,7 +26,7 @@ namespace PHPExceller\Helper;
  * @version        ##VERSION##, ##DATE##
  */
 
-class PHPExceller_Helper_HTML
+class HTML
 {
     protected static $colourMap = array(
         'aliceblue' => 'f0f8ff',

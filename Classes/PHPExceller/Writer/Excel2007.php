@@ -2,12 +2,12 @@
 namespace PHPExceller\Writer;
 
 use PHPExceller\PHPExceller;
-use PHPExceller\Writer\PHPExceller_Writer_Abstract;
-use PHPExceller\Writer\PHPExceller_Writer_IWriter;
-use PHPExceller\Shared\PHPExceller_Shared_File;
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Writer\Abstract;
+use PHPExceller\Writer\IWriter;
+use PHPExceller\Shared\File;
+use PHPExceller\Calculation;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Writer\Exception;
 
 /**
  * PHPExceller_Writer_Excel2007
@@ -34,7 +34,7 @@ use PHPExceller\Writer\PHPExceller_Writer_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007 extends PHPExceller_Writer_Abstract implements PHPExceller_Writer_IWriter
+class Excel2007 extends Abstract implements IWriter
 {
     /**
      * Pre-calculate formulas

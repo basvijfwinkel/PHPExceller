@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_RowCellIterator;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Worksheet\RowCellIterator;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_Worksheet_Row
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_Row
+class Row
 {
     /**
      * PHPExceller_Worksheet

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Shared\PHPExceller_Shared_Font;
-use PHPExceller\Style\PHPExceller_Style_Font;
+use PHPExceller\Shared\Font;
+use PHPExceller\Style\Font;
 
 /**
  * PHPExceller
@@ -38,7 +38,7 @@ use PHPExceller\Style\PHPExceller_Style_Font;
  * @package    PHPExceller_Shared
  * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Shared_Drawing
+class Drawing
 {
     /**
      * Convert pixels to EMU

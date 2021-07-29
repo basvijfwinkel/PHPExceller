@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\Excel2007\WriterPart;
 use PHPExceller\PHPExceller;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Shared\XMLWriter;
 
 /**
  * PHPExceller_Writer_Excel2007_RelsRibbon
@@ -30,7 +30,7 @@ use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version     ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_RelsRibbon extends PHPExceller_Writer_Excel2007_WriterPart
+class RelsRibbon extends WriterPart
 {
     /**
      * Write relationships for additional objects of custom UI (ribbon)

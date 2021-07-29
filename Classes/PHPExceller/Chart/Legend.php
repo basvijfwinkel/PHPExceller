@@ -26,7 +26,7 @@ namespace PHPExceller\Chart;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Chart_Legend
+class Legend
 {
     /** Legend positions */
     const xlLegendPositionBottom = -4107;    //    Below the chart.

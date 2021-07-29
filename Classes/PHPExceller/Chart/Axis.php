@@ -28,16 +28,16 @@ use PHPExceller\Chart\ChartProperties;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
- 
+
 /**
  * PHPExceller_Chart_Axis
  *
  * @category    PHPExceller
  * @package        PHPExceller_Chart
  * @copyright    Copyright (c) 2021 PHPExceller
- */ 
-class PHPExceller_Chart_Axis extends
-  ChartProperties {
+ */
+class Axis extends  ChartProperties 
+{
 
   /**
    * Axis Number

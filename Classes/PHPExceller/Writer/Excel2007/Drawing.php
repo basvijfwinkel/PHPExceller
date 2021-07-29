@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_BaseDrawing;
-use PHPExceller\Shared\PHPExceller_Shared_Drawing;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_HeaderFooterDrawing;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Writer\Exception;
+use PHPExceller\Worksheet;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Worksheet\BaseDrawing;
+use PHPExceller\Shared\Drawing;
+use PHPExceller\Worksheet\HeaderFooterDrawing;
 
 /**
  * PHPExceller_Writer_Excel2007_Drawing
@@ -34,7 +34,7 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_HeaderFooterDrawing;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_Drawing extends PHPExceller_Writer_Excel2007_WriterPart
+class Drawing extends WriterPart
 {
     /**
      * Write drawings to XML format

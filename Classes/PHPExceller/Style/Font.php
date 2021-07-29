@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Style\Color;
 
 /**
  * PHPExceller_Style_Font
@@ -30,7 +30,7 @@ use PHPExceller\Style\PHPExceller_Style_Color;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Style_Font extends PHPExceller_Style_Supervisor implements PHPExceller_IComparable
+class Font extends Supervisor implements IComparable
 {
     /* Underline types */
     const UNDERLINE_NONE             = 'none';

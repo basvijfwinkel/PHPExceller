@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Exception;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_NamedRange
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_NamedRange
+class NamedRange
 {
     /**
      * Range name

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared\EscherDggContainer\BstoreContainer;
+namespace PHPExceller\Shared\Escher\DggContainer\BstoreContainer;
 
 /**
  * PHPExceller_Shared_Escher_DggContainer_BstoreContainer_BSE
@@ -26,7 +26,7 @@ namespace PHPExceller\Shared\EscherDggContainer\BstoreContainer;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DggContainer_BstoreContainer_BSE
+class BSE
 {
     const BLIPTYPE_ERROR    = 0x00;
     const BLIPTYPE_UNKNOWN  = 0x01;

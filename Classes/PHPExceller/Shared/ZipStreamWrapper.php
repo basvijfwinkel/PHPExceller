@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\Reader\Exception;
 /**
  * PHPExceller_Shared_ZipStreamWrapper
  *
@@ -27,7 +27,7 @@ use PHPExceller\Reader\PHPExceller_Reader_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_ZipStreamWrapper
+class ZipStreamWrapper
 {
     /**
      * Internal ZipAcrhive

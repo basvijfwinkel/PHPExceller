@@ -1,12 +1,12 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_CFVOType;
-use PHPExceller\PHPExceller_Cell;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Style\CFVOType;
+use PHPExceller\Cell;
 
-class PHPExceller_Style_GroupedConditional extends PHPExceller_Style_Supervisor
+class GroupedConditional extends Supervisor
 {
     /**
     * cellReference definition : (eg:A1:C5)

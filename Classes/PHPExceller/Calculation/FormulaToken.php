@@ -51,7 +51,7 @@ PARTLY BASED ON:
  */
 
 
-class PHPExceller_Calculation_FormulaToken
+class FormulaToken
 {
     /* Token types */
     const TOKEN_TYPE_NOOP            = 'Noop';

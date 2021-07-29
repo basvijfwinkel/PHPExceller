@@ -3,28 +3,28 @@ namespace PHPExceller;
 
 use ArrayObject;
 use PHPExceller\PHPExceller;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_CachedObjectStorageFactory;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_PageSetup;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_PageMargins;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_HeaderFooter;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_SheetView;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_Protection;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_RowDimension;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnDimension;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter;
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\Shared\PHPExceller_Shared_String;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\PHPExceller_Chart;
-use PHPExceller\Shared\PHPExceller_Shared_Font;
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
-use PHPExceller\PHPExceller_ReferenceHelper;
-use PHPExceller\Cell\PHPExceller_Cell_DataType;
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\Style\PHPExceller_Style_Conditional;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_RowIterator;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnIterator;
+use PHPExceller\IComparable;
+use PHPExceller\CachedObjectStorageFactory;
+use PHPExceller\Worksheet\PageSetup;
+use PHPExceller\Worksheet\PageMargins;
+use PHPExceller\Worksheet\HeaderFooter;
+use PHPExceller\Worksheet\SheetView;
+use PHPExceller\Worksheet\Protection;
+use PHPExceller\Worksheet\RowDimension;
+use PHPExceller\Worksheet\ColumnDimension;
+use PHPExceller\Worksheet\AutoFilter;
+use PHPExceller\Calculation;
+use PHPExceller\Shared\String;
+use PHPExceller\Exception;
+use PHPExceller\Chart;
+use PHPExceller\Shared\Font;
+use PHPExceller\Style\NumberFormat;
+use PHPExceller\ReferenceHelper;
+use PHPExceller\Cell\DataType;
+use PHPExceller\Cell;
+use PHPExceller\Style\Conditional;
+use PHPExceller\Worksheet\RowIterator;
+use PHPExceller\Worksheet\ColumnIterator;
 
 /**
  * PHPExceller_Worksheet
@@ -51,7 +51,7 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnIterator;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet implements PHPExceller_IComparable
+class Worksheet implements IComparable
 {
     /* Break types */
     const BREAK_NONE   = 0;

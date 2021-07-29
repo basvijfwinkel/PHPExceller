@@ -1,25 +1,25 @@
 <?php
 namespace PHPExceller\Reader;
 
-use PHPExceller\Reader\PHPExceller_Reader_Abstract;
-use PHPExceller\Reader\PHPExceller_Reader_IReader;
-use PHPExceller\Reader\PHPExceller_Reader_DefaultReadFilter;
-use PHPExceller\PHPExceller_ReferenceHelper;
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
-use PHPExceller\PHPExceller_Settings;
-use PHPExceller\Reader\PHPExceller_Reader_Excel2007_Theme;
-use PHPExceller\Shared\PHPExceller_Shared_String;
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\Reader\Abstract;
+use PHPExceller\Reader\IReader;
+use PHPExceller\Reader\DefaultReadFilter;
+use PHPExceller\ReferenceHelper;
+use PHPExceller\Reader\Exception;
+use PHPExceller\Settings;
+use PHPExceller\Reader\Excel200\Theme;
+use PHPExceller\Shared\String;
+use PHPExceller\Style\NumberFormat;
 use PHPExceller\PHPExceller_Style;
-use PHPExceller\Shared\PHPExceller_Shared_Date;
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\PHPExceller_RichText;
-use PHPExceller\Style\PHPExceller_Style_Conditional;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
-use PHPExceller\Shared\PHPExceller_Shared_File;
-use PHPExceller\PHPExceller_NamedRange;
-use PHPExceller\Shared\PHPExceller_Shared_Font;
+use PHPExceller\Shared\Date;
+use PHPExceller\Cell;
+use PHPExceller\RichText;
+use PHPExceller\Style\Conditional;
+use PHPExceller\Worksheet\AutoFilter\Column\Rule;
+use PHPExceller\Worksheet\AutoFilter\Column;
+use PHPExceller\Shared\File;
+use PHPExceller\NamedRange;
+use PHPExceller\Shared\Font;
 
 /**
  * PHPExceller_Reader_Excel2007
@@ -46,7 +46,7 @@ use PHPExceller\Shared\PHPExceller_Shared_Font;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Reader_Excel2007 extends PHPExceller_Reader_Abstract implements PHPExceller_Reader_IReader
+class Excel2007 extends Abstract implements IReader
 {
     /**
      * PHPExceller_ReferenceHelper instance

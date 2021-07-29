@@ -1,11 +1,11 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Cell\PHPExceller_Cell_DataType;
-use PHPExceller\PHPExceller_RichText;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
-use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Cell\DataType;
+use PHPExceller\RichText;
+use PHPExceller\Writer\Exception;
+use PHPExceller\Shared\String;
 
 /**
  * PHPExceller_Writer_Excel2007_StringTable
@@ -32,7 +32,7 @@ use PHPExceller\Shared\PHPExceller_Shared_String;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_StringTable extends PHPExceller_Writer_Excel2007_WriterPart
+class StringTable extends WriterPart
 {
     /**
      * Create worksheet stringtable

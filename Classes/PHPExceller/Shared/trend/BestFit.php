@@ -35,7 +35,7 @@ namespace PHPExceller\Shared\trend;
  * @package    PHPExceller_Shared_Trend
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Best_Fit
+class BestFit
 {
     /**
      * Indicator flag for a calculation error

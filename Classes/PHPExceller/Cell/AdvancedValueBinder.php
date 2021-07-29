@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Cell;
 
-use  PHPExceller\Cell\PHPExceller_Cell_DefaultValueBinder;
-use  PHPExceller\Cell\PHPExceller_Cell_IValueBinder;
-use  PHPExceller\PHPExceller_Cell;
-use  PHPExceller\Cell\PHPExceller_Cell_DataType;
-use  PHPExceller\PHPExceller_Calculation;
-use  PHPExceller\Style\PHPExceller_Style_NumberFormat;
-use  PHPExceller\Shared\PHPExceller_Shared_String;
+use  PHPExceller\Cell\DefaultValueBinder;
+use  PHPExceller\Cell\IValueBinder;
+use  PHPExceller\Cell;
+use  PHPExceller\Cell\DataType;
+use  PHPExceller\Calculation;
+use  PHPExceller\Style\NumberFormat;
+use  PHPExceller\Shared\String;
 
 /**
  * PHPExceller_Cell_AdvancedValueBinder
@@ -34,7 +34,7 @@ use  PHPExceller\Shared\PHPExceller_Shared_String;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Cell_AdvancedValueBinder extends PHPExceller_Cell_DefaultValueBinder implements PHPExceller_Cell_IValueBinder
+class AdvancedValueBinder extends DefaultValueBinder implements IValueBinder
 {
     /**
      * Bind value to a cell

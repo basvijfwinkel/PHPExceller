@@ -1,25 +1,25 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Calculation\PHPExceller_Calculation_Token_Stack;
-use PHPExceller\Calculation\PHPExceller_Calculation_Function;
-use PHPExceller\Calculation\PHPExceller_Calculation_Database;
-use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
-use PHPExceller\Calculation\PHPExceller_Calculation_Engineering;
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
-use PHPExceller\Calculation\PHPExceller_Calculation_Financial;
-use PHPExceller\Calculation\PHPExceller_Calculation_FormulaParser;
-use PHPExceller\Calculation\PHPExceller_Calculation_FormulaToken;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\Calculation\PHPExceller_Calculation_Logical;
-use PHPExceller\Calculation\PHPExceller_Calculation_LookupRef;
-use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
-use PHPExceller\Calculation\PHPExceller_Calculation_Statistical;
-use PHPExceller\Calculation\PHPExceller_Calculation_TextData;
-use PHPExceller\CalcEngine\PHPExceller_CalcEngine_CyclicReferenceStack;
-use PHPExceller\CalcEngine\PHPExceller_CalcEngine_Logger;
+use PHPExceller\Shared\JAMA\Matrix;
+use PHPExceller\Worksheet;
+use PHPExceller\Calculation\Token\Stack;
+use PHPExceller\Calculation\Function;
+use PHPExceller\Calculation\Database;
+use PHPExceller\Calculation\DateTime;
+use PHPExceller\Calculation\Engineering;
+use PHPExceller\Calculation\Exception;
+use PHPExceller\Calculation\Financial;
+use PHPExceller\Calculation\FormulaParser;
+use PHPExceller\Calculation\FormulaToken;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Calculation\Logical;
+use PHPExceller\Calculation\LookupRef;
+use PHPExceller\Calculation\MathTrig;
+use PHPExceller\Calculation\Statistical;
+use PHPExceller\Calculation\TextData;
+use PHPExceller\CalcEngine\CyclicReferenceStack;
+use PHPExceller\CalcEngine\Logger;
 
 if (!defined('CALCULATION_REGEXP_CELLREF')) {
     //    Test for support of \P (multibyte options) in PCRE
@@ -61,7 +61,7 @@ if (!defined('CALCULATION_REGEXP_CELLREF')) {
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation
+class Calculation
 {
     /** Constants                */
     /** Regular Expressions        */

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\Calculation\PHPExceller_Calculation_MathTrig;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Calculation\MathTrig;
 
 /** EULER */
 define('EULER', 2.71828182845904523536);
@@ -32,7 +32,7 @@ define('EULER', 2.71828182845904523536);
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Engineering
+class Engineering
 {
     /**
      * Details of the Units of measure that can be used in CONVERTUOM()

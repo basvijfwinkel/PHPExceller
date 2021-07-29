@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnCellIterator;
+use PHPExceller\Worksheet;
+use PHPExceller\Worksheet\ColumnCellIterator;
 
 /**
  * PHPExceller_Worksheet_Column
@@ -29,7 +29,7 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnCellIterator;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_Column
+class Column
 {
     /**
      * PHPExceller_Worksheet

@@ -26,7 +26,7 @@ namespace PHPExceller\Shared\Escher\DggContainer\BstoreContainer\BSE;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip
+class Blip
 {
     /**
      * The parent BSE

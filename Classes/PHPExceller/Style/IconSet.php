@@ -1,11 +1,10 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_GroupedConditional;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_IconSet_CFIcon;
-use PHPExceller\Style\PHPExceller_Style_IconSet;
+use PHPExceller\Style\GroupedConditional;
+use PHPExceller\IComparable;
+use PHPExceller\Exception;
+use PHPExceller\Style\CFIcon;
 
 /**
  * PHPExceller
@@ -41,7 +40,7 @@ use PHPExceller\Style\PHPExceller_Style_IconSet;
  * @copyright  Copyright (c) 2021 PHPExceller
  * @author    Bas Vijfwinkel
  */
-class PHPExceller_Style_IconSet extends PHPExceller_Style_GroupedConditional implements PHPExceller_IComparable
+class IconSet extends GroupedConditional implements IComparable
 {
     const ICONSET_NAME_3ARROWS         = '3Arrows';
     const ICONSET_NAME_3ARROWSGRAY     = '3ArrowsGray';

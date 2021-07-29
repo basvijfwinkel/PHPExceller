@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_FormulaToken;
-use PHPExceller\Calculation\PHPExceller_Calculation_FormulaParser;
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
+use PHPExceller\Calculation\FormulaToken;
+use PHPExceller\Calculation\FormulaParser;
+use PHPExceller\Calculation\Exception;
 
 /*
 PARTLY BASED ON:
@@ -55,7 +55,7 @@ PARTLY BASED ON:
  */
 
 
-class PHPExceller_Calculation_FormulaParser
+class FormulaParser
 {
     /* Character constants */
     const QUOTE_DOUBLE  = '"';

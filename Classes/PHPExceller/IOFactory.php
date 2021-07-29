@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\Reader\Exception;
 
 /**
  * PHPExceller_IOFactory
@@ -30,7 +30,7 @@ use PHPExceller\Reader\PHPExceller_Reader_Exception;
  */
 
 
-class PHPExceller_IOFactory
+class IOFactory
 {
     /**
      * Search locations

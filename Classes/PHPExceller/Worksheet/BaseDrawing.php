@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Worksheet\Drawing\PHPExceller_Worksheet_Drawing_Shadow;
-use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\IComparable;
+use PHPExceller\Worksheet\Drawing\Shadow;
+use PHPExceller\Worksheet;
 
 /**
  * PHPExceller_Worksheet_BaseDrawing
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Worksheet;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_BaseDrawing implements PHPExceller_IComparable
+class BaseDrawing implements IComparable
 {
     /**
      * Image counter

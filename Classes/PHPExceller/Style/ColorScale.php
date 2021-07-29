@@ -1,11 +1,11 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_GroupedConditional;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_Color;
-use PHPExceller\Style\PHPExceller_Style_CFVOType;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\GroupedConditional;
+use PHPExceller\IComparable;
+use PHPExceller\Style\Color;
+use PHPExceller\Style\CFVOType;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller
@@ -42,7 +42,7 @@ use PHPExceller\PHPExceller_Exception;
  * @copyright  Copyright (c) 2021 PHPExceller
  * @author    Bas Vijfwinkel
  */
-class PHPExceller_Style_ColorScale extends PHPExceller_Style_GroupedConditional implements PHPExceller_IComparable
+class ColorScale extends GroupedConditional implements IComparable
 {
 
     /**

@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_Supervisor;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Style\PHPExceller_Style_Color;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Style\Supervisor;
+use PHPExceller\IComparable;
+use PHPExceller\Style\Color;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Style_Color
@@ -40,7 +40,7 @@ use PHPExceller\PHPExceller_Exception;
  * @package    PHPExceller_Style
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Style_Color extends PHPExceller_Style_Supervisor implements PHPExceller_IComparable
+class Color extends Supervisor implements IComparable
 {
     /* Colors */
     const COLOR_BLACK                      = 'FF000000';

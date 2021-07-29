@@ -29,7 +29,7 @@ use PHPExceller;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_WorksheetIterator implements Iterator
+class WorksheetIterator implements Iterator
 {
     /**
      * Spreadsheet to iterate

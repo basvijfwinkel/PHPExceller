@@ -26,7 +26,7 @@ namespace PHPExceller\Reader;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-interface PHPExceller_Reader_IReadFilter
+interface IReadFilter
 {
     /**
      * Should this cell be read?

@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\Chart\PHPExceller_Chart_Title;
-use PHPExceller\Chart\PHPExceller_Chart_Legend;
-use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
-use PHPExceller\Chart\PHPExceller_Chart_Axis;
-use PHPExceller\Chart\PHPExceller_Chart_GridLines;
-use PHPExceller\Chart\PHPExceller_Chart_Axis;
-use PHPExceller\Chart\Renderer\PHPExceller_Chart_Renderer_jpgraph;
+use PHPExceller\Chart\Title;
+use PHPExceller\Chart\Legend;
+use PHPExceller\Chart\PlotArea;
+use PHPExceller\Chart\Axis;
+use PHPExceller\Chart\GridLines;
+use PHPExceller\Chart\Axis;
+use PHPExceller\Chart\Renderer\jpgraph;
 
 /**
  * PHPExceller_Chart
@@ -34,7 +34,7 @@ use PHPExceller\Chart\Renderer\PHPExceller_Chart_Renderer_jpgraph;
  * @license     http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version     ##VERSION##, ##DATE##
  */
-class PHPExceller_Chart
+class Chart
 {
     /**
      * Chart Name

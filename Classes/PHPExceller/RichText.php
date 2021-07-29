@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\RichText\PHPExceller_RichText_Run;
-use PHPExceller\Cell\PHPExceller_Cell_DataType;
-use PHPExceller\RichText\PHPExceller_RichText_ITextElement;
-use PHPExceller\RichText\PHPExceller_RichText_TextElement;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\IComparable;
+use PHPExceller\Cell;
+use PHPExceller\RichText\Run;
+use PHPExceller\Cell\DataType;
+use PHPExceller\RichText\ITextElement;
+use PHPExceller\RichText\TextElement;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_RichText
@@ -34,7 +34,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_RichText implements PHPExceller_IComparable
+class RichText implements IComparable
 {
     /**
      * Rich text elements

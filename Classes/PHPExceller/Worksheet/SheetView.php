@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_SheetView
@@ -28,7 +28,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_SheetView
+class SheetView
 {
 
     /* Sheet View types */

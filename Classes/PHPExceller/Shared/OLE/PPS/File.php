@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Shared\OLE\PPS;
 
-use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE;
-use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE_PPS;
+use PHPExceller\Shared\OLE;
+use PHPExceller\Shared\OLE\PPS;
 
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
@@ -31,7 +31,7 @@ use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE_PPS;
 * @category PHPExceller
 * @package  PHPExceller_Shared_OLE
 */
-class PHPExceller_Shared_OLE_PPS_File extends PHPExceller_Shared_OLE_PPS
+class File extends PPS
 {
     /**
     * The constructor

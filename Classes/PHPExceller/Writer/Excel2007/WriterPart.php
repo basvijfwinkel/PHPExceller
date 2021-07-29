@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\PHPExceller_Writer_IWriter;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Writer\IWriter;
+use PHPExceller\Writer\Exception;
 
 /**
  * PHPExceller_Writer_Excel2007_WriterPart
@@ -29,7 +29,7 @@ use PHPExceller\Writer\PHPExceller_Writer_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-abstract class PHPExceller_Writer_Excel2007_WriterPart
+abstract class WriterPart
 {
     /**
      * Parent IWriter object

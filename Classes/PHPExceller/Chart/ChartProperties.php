@@ -33,8 +33,9 @@ namespace PHPExceller\Chart;
  * @category    PHPExceller
  * @package        PHPExceller_Chart
  * @copyright    Copyright (c) 2021 PHPExceller
- */ 
-abstract class ChartProperties {
+ */
+abstract class ChartProperties
+{
     const
         EXCEL_COLOR_TYPE_STANDARD = 'prstClr',
         EXCEL_COLOR_TYPE_SCHEME = 'schemeClr',

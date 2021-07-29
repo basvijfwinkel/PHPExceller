@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
-use PHPExceller\Shared\PHPExceller_Shared_Date;
+use PHPExceller\Calculation\Functions;
+use PHPExceller\Shared\Date;
 
 /**
  * PHPExceller_Calculation_DateTime
@@ -29,7 +29,7 @@ use PHPExceller\Shared\PHPExceller_Shared_Date;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_DateTime
+class DateTime
 {
     /**
      * Identify if a year is a leap year or not

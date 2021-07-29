@@ -35,7 +35,7 @@ namespace PHPExceller\Reader\Excel2007;
  * @package    PHPExceller_Reader_Excel2007
  * @copyright  Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Reader_Excel2007_Theme
+class Theme
 {
     /**
      * Theme Name

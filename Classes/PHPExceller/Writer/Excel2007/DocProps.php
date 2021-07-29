@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Writer\Exception;
 use PHPExceller\PHPExceller;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Shared\XMLWriter;
 
 /**
  * PHPExceller_Writer_Excel2007_DocProps
@@ -31,7 +31,7 @@ use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_DocProps extends PHPExceller_Writer_Excel2007_WriterPart
+class DocProps extends WriterPart
 {
     /**
      * Write docProps/app.xml to XML format

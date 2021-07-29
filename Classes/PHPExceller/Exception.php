@@ -37,7 +37,7 @@ use Exception;
  * @package    PHPExceller
  * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Exception extends Exception
+class Exception extends Exception
 {
     /**
      * Error handler callback

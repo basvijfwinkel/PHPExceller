@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Chart;
 
-use PHPExceller\Chart\PHPExceller_Chart_Layout;
-use PHPExceller\Style\PHPExceller_Style_Font;
+use PHPExceller\Chart\Layout;
+use PHPExceller\Style\Font;
 
 /**
  * PHPExceller_Chart_Title
@@ -35,10 +35,10 @@ use PHPExceller\Style\PHPExceller_Style_Font;
  * PHPExceller_Chart_Title
  *
  * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2021 PHPExceller
+ * @package     PHPExceller_Chart
+ * @copyright   Copyright (c) 2021 PHPExceller
  */
-class PHPExceller_Chart_Title
+class Title
 {
 
     /**

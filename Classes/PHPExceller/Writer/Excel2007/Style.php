@@ -1,13 +1,13 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\Excel2007\WriterPart;
 use PHPExceller\PHPExceller;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\Style\PHPExceller_Style_Fill;
-use PHPExceller\Style\PHPExceller_Style_Borders;
-use PHPExceller\Style\PHPExceller_Style_Border;
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Style\Fill;
+use PHPExceller\Style\Borders;
+use PHPExceller\Style\Border;
+use PHPExceller\Style\NumberFormat;
 
 /**
  * PHPExceller
@@ -43,7 +43,7 @@ use PHPExceller\Style\PHPExceller_Style_NumberFormat;
  * @package    PHPExceller_Writer_Excel2007
  * @copyright  Copyright (c) 2006 - 2014 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Writer_Excel2007_Style extends PHPExceller_Writer_Excel2007_WriterPart
+class Style extends WriterPart
 {
     /**
      * Write styles to XML format

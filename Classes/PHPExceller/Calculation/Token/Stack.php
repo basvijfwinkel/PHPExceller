@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Calculation\Token;
 
-use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\Calculation;
 
 /**
  * PHPExceller_Calculation_Token_Stack
@@ -28,7 +28,7 @@ use PHPExceller\PHPExceller_Calculation;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Token_Stack
+class Stack
 {
     /**
      *  The parser stack for formulae

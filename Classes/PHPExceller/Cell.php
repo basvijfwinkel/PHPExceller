@@ -1,17 +1,17 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_CacheBase;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Cell\PHPExceller_Cell_DataType;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;  
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
-use PHPExceller\PHPExceller_RichText;
-use PHPExceller\Cell\PHPExceller_Cell_DataValidation;
-use PHPExceller\Cell\PHPExceller_Cell_DefaultValueBinder;
-use PHPExceller\Cell\PHPExceller_Cell_IValueBinder;
+use PHPExceller\CachedObjectStorage\CacheBase;
+use PHPExceller\Worksheet;
+use PHPExceller\Cell\DataType;
+use PHPExceller\Exception;
+use PHPExceller\Style\NumberFormat;
+use PHPExceller\Calculation;
+use PHPExceller\Calculation\Exception;
+use PHPExceller\RichText;
+use PHPExceller\Cell\DataValidation;
+use PHPExceller\Cell\DefaultValueBinder;
+use PHPExceller\Cell\IValueBinder;
 
 /**
  *    PHPExceller_Cell
@@ -38,7 +38,7 @@ use PHPExceller\Cell\PHPExceller_Cell_IValueBinder;
  *    @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  *    @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Cell
+class Cell
 {
     /**
      *  Default range variable constant

@@ -1,8 +1,7 @@
 <?php
 namespace PHPExceller\Style\IconSet;
 
-use PHPExceller\Style\PHPExceller_Style_IconSet_CFIcon;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller
@@ -39,7 +38,7 @@ use PHPExceller\PHPExceller_Exception;
  * @copyright  Copyright (c) 2021 PHPExceller
  * @author    Bas Vijfwinkel
  */
-class PHPExceller_Style_IconSet_CFIcon
+class CFIcon
 {
     /*
     *    @var iconSet

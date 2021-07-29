@@ -26,7 +26,7 @@ namespace PHPExceller\Shared\Escher;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Escher_DggContainer
+class DggContainer
 {
     /**
      * Maximum shape index of all shapes in all drawings increased by one

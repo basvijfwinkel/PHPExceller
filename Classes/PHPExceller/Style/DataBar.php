@@ -1,12 +1,12 @@
 <?php
 namespace PHPExceller\Style;
 
-use PHPExceller\Style\PHPExceller_Style_GroupedConditional;
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_Style;
-use PHPExceller\PHPExceller_Exception;
-use PHPExceller\Style\PHPExceller_Style_CFVOType;
-use PHPExceller\Style\PHPExceller_Style_Color;
+use PHPExceller\Style\GroupedConditional;
+use PHPExceller\IComparable;
+use PHPExceller\Style;
+use PHPExceller\Exception;
+use PHPExceller\Style\CFVOType;
+use PHPExceller\Style\Color;
 
 /*
 TODO :
@@ -82,7 +82,7 @@ TODO :
  * @copyright  Copyright (c) 2021 PHPExceller
  * @author    Bas Vijfwinkel
  */
-class PHPExceller_Style_DataBar extends PHPExceller_Style_GroupedConditional implements PHPExceller_IComparable
+class DataBar extends GroupedConditional implements IComparable
 {
 
     /**

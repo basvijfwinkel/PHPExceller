@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared\trend;
 
-use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
+use PHPExceller\Shared\trend\BestFit;
 
 /**
  * PHPExceller_Logarithmic_Best_Fit
@@ -28,7 +28,7 @@ use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Logarithmic_Best_Fit extends PHPExceller_Best_Fit
+class LogarithmicBestFit extends BestFit
 {
     /**
      * Algorithm type to use for best-fit

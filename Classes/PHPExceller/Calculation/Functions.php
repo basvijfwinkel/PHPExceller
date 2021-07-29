@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation;
+use PHPExceller\Calculation\Functions;
 
 /** MAX_VALUE */
 define('MAX_VALUE', 1.2e308);
@@ -42,7 +42,7 @@ define('PRECISION', 8.88E-016);
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_Functions
+class Functions
 {
 
     /** constants */

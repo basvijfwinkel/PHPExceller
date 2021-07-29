@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\Excel2007\WriterPart;
 use PHPExceller\PHPExceller;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Shared\XMLWriter;
 
 /**
  * PHPExceller
@@ -39,7 +39,7 @@ use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
  * @package    PHPExceller_Writer_Excel2007
  * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Writer_Excel2007_Theme extends PHPExceller_Writer_Excel2007_WriterPart
+class Theme extends WriterPart
 {
     /**
      * Map of Major fonts to write

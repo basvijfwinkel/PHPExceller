@@ -1,12 +1,12 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\Worksheet\AutoFilter\PHPExceller_Worksheet_AutoFilter_Column;
-use PHPExceller\Shared\PHPExceller_Shared_Date;
-use PHPExceller\Worksheet\Autofilter\Column\PHPExceller_Worksheet_AutoFilter_Column_Rule;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Worksheet;
+use PHPExceller\Cell;
+use PHPExceller\Worksheet\AutoFilter\Column;
+use PHPExceller\Shared\Date;
+use PHPExceller\Worksheet\Autofilter\Column\Rule;
+use PHPExceller\Calculation\Functions;
 
 /**
  * PHPExceller_Worksheet_AutoFilter
@@ -33,7 +33,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_AutoFilter
+class AutoFilter
 {
     /**
      * Autofilter Worksheet

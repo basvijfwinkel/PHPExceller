@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_Cell;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Cell;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller
@@ -109,7 +109,7 @@ use PHPExceller\PHPExceller_Exception;
  * @package    PHPExceller_Worksheet
  * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Worksheet_PageSetup
+class PageSetup
 {
     /* Paper size */
     const PAPERSIZE_LETTER                          = 1;

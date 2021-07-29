@@ -28,7 +28,7 @@ use ZipArchive;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_File
+class File
 {
     /*
      * Use Temp or File Upload Temp for temporary files

@@ -1,9 +1,9 @@
 <?php
-namespace PHPExceller\Worksheet\Autofilter;
+namespace PHPExceller\Worksheet\AutoFilter;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter;
-use PHPExceller\Worksheet\Autofilter\Column\PHPExceller_Worksheet_AutoFilter_Column_Rule;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Worksheet\AutoFilter;
+use PHPExceller\Worksheet\Autofilter\Column\Rule;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_AutoFilter_Column
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_AutoFilter_Column
+class Column
 {
     const AUTOFILTER_FILTERTYPE_FILTER         = 'filters';
     const AUTOFILTER_FILTERTYPE_CUSTOMFILTER   = 'customFilters';

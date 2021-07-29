@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Reader\PHPExceller_Reader_Exception;
+use PHPExceller\Reader\Exception;
 
 /**
  * PHPExceller
@@ -32,7 +32,7 @@ use PHPExceller\Reader\PHPExceller_Reader_Exception;
 defined('IDENTIFIER_OLE') ||
     define('IDENTIFIER_OLE', pack('CCCCCCCC', 0xd0, 0xcf, 0x11, 0xe0, 0xa1, 0xb1, 0x1a, 0xe1));
 
-class PHPExceller_Shared_OLERead
+class OLERead
 {
     private $data = '';
 

@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Writer;
 
-use PHPExceller\Writer\PHPExceller_Writer_IWriter;
-use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Writer\IWriter;
+use PHPExceller\Writer\Exception;
 
 /**
  * PHPExceller_Writer_Abstract
@@ -29,7 +29,7 @@ use PHPExceller\Writer\PHPExceller_Writer_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-abstract class PHPExceller_Writer_Abstract implements PHPExceller_Writer_IWriter
+abstract class Abstract implements IWriter
 {
     /**
      * Write charts that are defined in the workbook?

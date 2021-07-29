@@ -35,7 +35,7 @@ namespace PHPExceller\Chart;
  * @package        PHPExceller_Chart
  * @copyright    Copyright (c) 2006 - 2014 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Chart_Layout
+class Layout
 {
         // data label positions
         const LABEL_POS_CENTER = 'ctr';

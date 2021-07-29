@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_BaseDrawing;
-use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Worksheet\BaseDrawing;
+use PHPExceller\IComparable;
 
 /**
  * PHPExceller_Worksheet_Drawing
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_IComparable;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_Drawing extends PHPExceller_Worksheet_BaseDrawing implements PHPExceller_IComparable
+class Drawing extends BaseDrawing implements IComparable
 {
     /**
      * Path
@@ -44,9 +44,9 @@ class PHPExceller_Worksheet_Drawing extends PHPExceller_Worksheet_BaseDrawing im
      * @var string
      */
     protected $_rId;
-    
+
     protected $_referenceHashTag;
-    
+
     /**
      * Create a new PHPExceller_Worksheet_Drawing
      */
@@ -166,17 +166,17 @@ class PHPExceller_Worksheet_Drawing extends PHPExceller_Worksheet_BaseDrawing im
             }
         }
     }
-    
+
     public function setMediaReferenceId($rId)
     {
         $this->_rId = $rId;
     }
-    
+
     public function getMediaReferenceId()
     {
         return $this->_rId;
     }
-    
+
     public function getReferenceHashTag()
     {
         return $this->_referenceHashTag ;

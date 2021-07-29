@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Calculation;
 
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Calculation\Functions;
 
 /**
  * PHPExceller_Calculation_TextData
@@ -28,7 +28,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
  * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version        ##VERSION##, ##DATE##
  */
-class PHPExceller_Calculation_TextData
+class TextData
 {
     private static $invalidChars;
 

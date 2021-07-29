@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Reader;
 
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Exception as Exception;
 
 /**
  * PHPExceller_Reader_Exception
@@ -28,7 +28,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Reader_Exception extends PHPExceller_Exception
+class ReaderException extends Exception
 {
     /**
      * Error handler callback

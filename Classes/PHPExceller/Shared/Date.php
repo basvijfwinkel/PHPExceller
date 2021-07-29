@@ -1,9 +1,9 @@
 <?php
 namespace PHPExceller\Shared;
 
-use PHPExceller\Style\PHPExceller_Style_NumberFormat;
-use PHPExceller\Calculation\PHPExceller_Calculation_DateTime;
-use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Style\NumberFormat;
+use PHPExceller\Calculation\DateTime;
+use PHPExceller\Calculation\Functions;
 
 /**
  * PHPExceller_Shared_Date
@@ -30,7 +30,7 @@ use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Shared_Date
+class Date
 {
     /** constants */
     const CALENDAR_WINDOWS_1900 = 1900;        //    Base date of 1st Jan 1900 = 1.0

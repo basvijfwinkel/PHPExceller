@@ -1,8 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_BaseDrawing;
-use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Worksheet\BaseDrawing;
+use PHPExceller\IComparable;
 
 /**
  * PHPExceller_Worksheet_MemoryDrawing
@@ -29,7 +29,7 @@ use PHPExceller\PHPExceller_IComparable;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_MemoryDrawing extends PHPExceller_Worksheet_BaseDrawing implements PHPExceller_IComparable
+class MemoryDrawing extends BaseDrawing implements IComparable
 {
     /* Rendering functions */
     const RENDERING_DEFAULT                    = 'imagepng';

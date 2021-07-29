@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
-use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Comment;
+use PHPExceller\Writer\Excel2007\WriterPart;
+use PHPExceller\Shared\XMLWriter;
+use PHPExceller\Worksheet;
+use PHPExceller\Comment;
 
 /**
  * PHPExceller_Writer_Excel2007_Comments
@@ -31,7 +31,7 @@ use PHPExceller\PHPExceller_Comment;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Writer_Excel2007_Comments extends PHPExceller_Writer_Excel2007_WriterPart
+class Comments extends WriterPart
 {
     /**
      * Write comments to XML format

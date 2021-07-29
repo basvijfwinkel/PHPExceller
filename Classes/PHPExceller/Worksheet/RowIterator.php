@@ -2,8 +2,8 @@
 namespace PHPExceller\Worksheet;
 
 use Iterator;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Worksheet;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_RowIterator
@@ -30,7 +30,7 @@ use PHPExceller\PHPExceller_Exception;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Worksheet_RowIterator implements Iterator
+class RowIterator implements Iterator
 {
     /**
      * PHPExceller_Worksheet to iterate

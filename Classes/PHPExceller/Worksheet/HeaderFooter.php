@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Worksheet;
 
-use PHPExceller\PHPExceller_Exception;
+use PHPExceller\Exception;
 
 /**
  * PHPExceller_Worksheet_HeaderFooter
@@ -89,7 +89,7 @@ use PHPExceller\PHPExceller_Exception;
  * </code>
  *
  */
-class PHPExceller_Worksheet_HeaderFooter
+class HeaderFooter
 {
     /* Header/footer image location */
     const IMAGE_HEADER_LEFT   = 'LH';

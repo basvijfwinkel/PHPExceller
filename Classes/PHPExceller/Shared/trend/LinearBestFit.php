@@ -1,7 +1,7 @@
 <?php
 namespace PHPExceller\Shared\trend;
 
-use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
+use PHPExceller\Shared\trend\BestFit;
 
 /**
  * PHPExceller_Linear_Best_Fit
@@ -29,7 +29,7 @@ use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
  * @version    ##VERSION##, ##DATE##
  */
 
-class PHPExceller_Linear_Best_Fit extends PHPExceller_Best_Fit
+class LinearBestFit extends BestFit
 {
     /**
      * Algorithm type to use for best-fit

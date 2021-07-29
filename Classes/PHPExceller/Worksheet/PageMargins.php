@@ -35,7 +35,7 @@ namespace PHPExceller\Worksheet;
  * @package    PHPExceller_Worksheet
  * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
  */
-class PHPExceller_Worksheet_PageMargins
+class PageMargins
 {
     /**
      * Left

@@ -1,10 +1,10 @@
 <?php
 namespace PHPExceller;
 
-use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\PHPExceller_RichText;
-use PHPExceller\Style\PHPExceller_Style_Color;
-use PHPExceller\Style\PHPExceller_Style_Alignment;
+use PHPExceller\IComparable;
+use PHPExceller\RichText;
+use PHPExceller\Style\Color;
+use PHPExceller\Style\Alignment;
 
 /**
  * PHPExceller_Comment
@@ -31,7 +31,7 @@ use PHPExceller\Style\PHPExceller_Style_Alignment;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_Comment implements PHPExceller_IComparable
+class Comment implements IComparable
 {
     /**
      * Author
