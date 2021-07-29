@@ -2,9 +2,8 @@
 namespace PHPExceller;
 
 use ArrayObject;
+use PHPExceller\PHPExceller;
 use PHPExceller\PHPExceller_IComparable;
-use PHPExceller;
-use PHPExceller\PHPExceller_Worksheet;
 use PHPExceller\PHPExceller_CachedObjectStorageFactory;
 use PHPExceller\Worksheet\PHPExceller_Worksheet_PageSetup;
 use PHPExceller\Worksheet\PHPExceller_Worksheet_PageMargins;
@@ -15,14 +14,12 @@ use PHPExceller\Worksheet\PHPExceller_Worksheet_RowDimension;
 use PHPExceller\Worksheet\PHPExceller_Worksheet_ColumnDimension;
 use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter;
 use PHPExceller\PHPExceller_Calculation;
-use PHPExceller\PHPExceller_Shared_String;
+use PHPExceller\Shared\PHPExceller_Shared_String;
 use PHPExceller\PHPExceller_Exception;
 use PHPExceller\PHPExceller_Chart;
-use PHPExceller\PHPExceller_Shared_Font;
-use PHPExceller\PHPExceller_Style_NumberFormat;
+use PHPExceller\Shared\PHPExceller_Shared_Font;
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
 use PHPExceller\PHPExceller_ReferenceHelper;
-use PHPExceller\PHPExceller_Worksheet;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_SheetView;
 use PHPExceller\Cell\PHPExceller_Cell_DataType;
 use PHPExceller\PHPExceller_Cell;
 use PHPExceller\Style\PHPExceller_Style_Conditional;
@@ -2942,7 +2939,7 @@ class PHPExceller_Worksheet implements PHPExceller_IComparable
         $pValue = str_replace(' ', '_', $pValue);//Excel does this automatically without flinching, we are doing the same
         // Syntax check
         // throw an exception if not valid
-        self::_checkSheetCodeName($pValue);
+        self::checkSheetCodeName($pValue);
 
         // We use the same code that setTitle to find a valid codeName else not using a space (Excel don't like) but a '_'
         if ($this->getParent()) {

@@ -1,12 +1,13 @@
 <?php
 namespace PHPExceller\CachedObjectStorage;
 
-use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_CacheBase; 
+use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_CacheBase;
 use PHPExceller\CachedObjectStorage\PHPExceller_CachedObjectStorage_ICache;
 use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Worksheet;
 
 /**
- * PHPExceller_CachedObjectStorage_MemorySerialized
+ * PHPExceller_CachedObjectStorage_Memory
  *
  * Copyright (c) 2021 PHPExceller
  *
@@ -30,24 +31,15 @@ use PHPExceller\PHPExceller_Cell;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class PHPExceller_CachedObjectStorage_MemorySerialized extends PHPExceller_CachedObjectStorage_CacheBase implements PHPExceller_CachedObjectStorage_ICache
+class PHPExceller_CachedObjectStorage_Memory extends PHPExceller_CachedObjectStorage_CacheBase implements PHPExceller_CachedObjectStorage_ICache
 {
     /**
-     * Store cell data in cache for the current cell object if it's "dirty",
-     *     and the 'nullify' the current cell object
+     * Dummy method callable from CacheBase, but unused by Memory cache
      *
      * @return    void
-     * @throws    PHPExceller_Exception
      */
     protected function storeData()
     {
-        if ($this->currentCellIsDirty && !empty($this->currentObjectID)) {
-            $this->currentObject->detach();
-
-            $this->cellCache[$this->currentObjectID] = serialize($this->currentObject);
-            $this->currentCellIsDirty = false;
-        }
-        $this->currentObjectID = $this->currentObject = null;
     }
 
     /**
@@ -60,16 +52,14 @@ class PHPExceller_CachedObjectStorage_MemorySerialized extends PHPExceller_Cache
      */
     public function addCacheData($pCoord, PHPExceller_Cell $cell)
     {
-        if (($pCoord !== $this->currentObjectID) && ($this->currentObjectID !== null)) {
-            $this->storeData();
-        }
+        $this->cellCache[$pCoord] = $cell;
 
+        //    Set current entry to the new/updated entry
         $this->currentObjectID = $pCoord;
-        $this->currentObject = $cell;
-        $this->currentCellIsDirty = true;
 
         return $cell;
     }
+
 
     /**
      * Get cell at a specific coordinate
@@ -80,52 +70,52 @@ class PHPExceller_CachedObjectStorage_MemorySerialized extends PHPExceller_Cache
      */
     public function getCacheData($pCoord)
     {
-        if ($pCoord === $this->currentObjectID) {
-            return $this->currentObject;
-        }
-        $this->storeData();
-
         //    Check if the entry that has been requested actually exists
         if (!isset($this->cellCache[$pCoord])) {
+            $this->currentObjectID = null;
             //    Return null if requested entry doesn't exist in cache
             return null;
         }
 
         //    Set current entry to the requested entry
         $this->currentObjectID = $pCoord;
-        $this->currentObject = unserialize($this->cellCache[$pCoord]);
-        //    Re-attach this as the cell's parent
-        $this->currentObject->attach($this);
 
         //    Return requested entry
-        return $this->currentObject;
+        return $this->cellCache[$pCoord];
     }
 
+
     /**
-     * Get a list of all cell addresses currently held in cache
+     * Clone the cell collection
      *
-     * @return  string[]
+     * @param    PHPExceller_Worksheet    $parent        The new worksheet
      */
-    public function getCellList()
+    public function copyCellCollection(PHPExceller_Worksheet $parent)
     {
-        if ($this->currentObjectID !== null) {
-            $this->storeData();
+        parent::copyCellCollection($parent);
+
+        $newCollection = array();
+        foreach ($this->cellCache as $k => &$cell) {
+            $newCollection[$k] = clone $cell;
+            $newCollection[$k]->attach($this);
         }
 
-        return parent::getCellList();
+        $this->cellCache = $newCollection;
     }
 
     /**
      * Clear the cell collection and disconnect from our parent
      *
-     * @return    void
      */
     public function unsetWorksheetCells()
     {
-        if (!is_null($this->currentObject)) {
-            $this->currentObject->detach();
-            $this->currentObject = $this->currentObjectID = null;
+        // Because cells are all stored as intact objects in memory, we need to detach each one from the parent
+        foreach ($this->cellCache as $k => &$cell) {
+            $cell->detach();
+            $this->cellCache[$k] = null;
         }
+        unset($cell);
+
         $this->cellCache = array();
 
         //    detach ourself from the worksheet, so that it can then delete this object successfully

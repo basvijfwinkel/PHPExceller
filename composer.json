@@ -22,9 +22,8 @@
         "squizlabs/php_codesniffer": "2.*"
     },
     "autoload": {
-        "psr-0": {
-            "PHPExceller": "Classes/"
-        }
+                   "psr-4": {"PHPExceller\\": "Classes/"}
+                }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
