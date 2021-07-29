@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Chart;
+namespace PHPExceller\Chart\Renderer;
 
 use PHPExceller\Style\PHPExceller_Style_NumberFormat;
 use PHPExceller\PHPExceller_Settings;

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Reader;
+namespace PHPExceller\Reader\Excel2007;
 
 /**
  * PHPExceller

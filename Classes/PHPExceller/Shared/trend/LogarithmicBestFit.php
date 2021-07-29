@@ -1,7 +1,7 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\trend;
 
-use PHPExceller\Shared\PHPExceller_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
 
 /**
  * PHPExceller_Logarithmic_Best_Fit

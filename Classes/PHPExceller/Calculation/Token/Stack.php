@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Calculation;
+namespace PHPExceller\Calculation\Token;
 
 use PHPExceller\PHPExceller_Calculation;
 

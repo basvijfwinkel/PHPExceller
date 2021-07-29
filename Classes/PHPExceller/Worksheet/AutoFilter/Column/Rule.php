@@ -1,7 +1,7 @@
 <?php
-namespace PHPExceller\Worksheet;
+namespace PHPExceller\Worksheet\AutoFilter\Column;
 
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
+use PHPExceller\Worksheet\AutoFilter\PHPExceller_Worksheet_AutoFilter_Column;
 use PHPExceller\PHPExceller_Exception;
 
 /**

@@ -3,9 +3,9 @@ namespace PHPExceller\Worksheet;
 
 use PHPExceller\PHPExceller_Worksheet;
 use PHPExceller\PHPExceller_Cell;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
+use PHPExceller\Worksheet\AutoFilter\PHPExceller_Worksheet_AutoFilter_Column;
 use PHPExceller\Shared\PHPExceller_Shared_Date;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
+use PHPExceller\Worksheet\Autofilter\Column\PHPExceller_Worksheet_AutoFilter_Column_Rule;
 use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
 
 /**

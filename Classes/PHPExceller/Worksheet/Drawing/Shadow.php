@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Worksheet;
+namespace PHPExceller\Worksheet\Drawing;
 
 use PHPExceller\PHPExceller_IComparable;
 use PHPExceller\Style\PHPExceller_Style_Color;

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\JAMA;
 
 /**
  *    @package JAMA

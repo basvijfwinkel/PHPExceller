@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Reader;
+namespace PHPExceller\Reader\Excel2007;
 
 use PHPExceller\Style\PHPExceller_Style_Color;
 use PHPExceller\Chart\PHPExceller_Chart_Layout;

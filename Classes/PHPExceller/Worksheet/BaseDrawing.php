@@ -2,7 +2,7 @@
 namespace PHPExceller\Worksheet;
 
 use PHPExceller\PHPExceller_IComparable;
-use PHPExceller\Worksheet\PHPExceller_Worksheet_Drawing_Shadow;
+use PHPExceller\Worksheet\Drawing\PHPExceller_Worksheet_Drawing_Shadow;
 use PHPExceller\PHPExceller_Worksheet;
 
 /**

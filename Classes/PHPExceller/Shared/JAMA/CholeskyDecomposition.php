@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\JAMA;
 
 use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
 

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Writer;
+namespace PHPExceller\Writer\Excel2007;
 
 use PHPExceller\Writer\PHPExceller_Writer_IWriter;
 use PHPExceller\Writer\PHPExceller_Writer_Exception;

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\trend;
 
 /**
  * PHPExceller_Best_Fit

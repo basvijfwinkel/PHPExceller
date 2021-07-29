@@ -1,8 +1,8 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\OLE\PPS;
 
-use PHPExceller\Shared\PHPExceller_Shared_OLE;
-use PHPExceller\Shared\PHPExceller_Shared_OLE_PPS;
+use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE;
+use PHPExceller\Shared\OLE\PHPExceller_Shared_OLE_PPS;
 
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |

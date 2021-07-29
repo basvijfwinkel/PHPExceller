@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Style;
+namespace PHPExceller\Style\DataBar;
 
 use PHPExceller\PHPExceller_Exception;
 use PHPExceller\Style\PHPExceller_Style_DataBar_DataBarAxisPosition;

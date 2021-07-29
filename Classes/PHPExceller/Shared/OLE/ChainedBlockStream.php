@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\OLE;
 
 /**
  * PHPExceller_Shared_OLE_ChainedBlockStream

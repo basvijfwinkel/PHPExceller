@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\PCLZip;
 
 // --------------------------------------------------------------------------------
 // PhpConcept Library - Zip Module 2.8.2

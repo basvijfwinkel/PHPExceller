@@ -1,8 +1,8 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\JAMA;
 
 use PHPExceller\Calculation\PHPExceller_Calculation_Exception;
-use PHPExceller\Shared\PHPExceller_Shared_JAMA_Matrix;
+use PHPExceller\Shared\JAMA\PHPExceller_Shared_JAMA_Matrix;
 
 
 /**

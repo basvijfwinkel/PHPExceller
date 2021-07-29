@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\Escher\DggContainer\BstoreContainer\BSE;
 
 /**
  * PHPExceller_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip

@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Style;
+namespace PHPExceller\Style\IconSet;
 
 use PHPExceller\Style\PHPExceller_Style_IconSet_CFIcon;
 use PHPExceller\PHPExceller_Exception;

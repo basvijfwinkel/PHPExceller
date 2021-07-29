@@ -1,7 +1,7 @@
 <?php
-namespace PHPExceller\Writer;
+namespace PHPExceller\Writer\Excel2007;
 
-use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\Excel2007\PHPExceller_Writer_Excel2007_WriterPart;
 use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
 use PHPExceller\PHPExceller;
 use PHPExceller\PHPExceller_Worksheet;

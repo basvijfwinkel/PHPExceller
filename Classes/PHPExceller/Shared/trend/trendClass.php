@@ -1,13 +1,13 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\trend;
 
-use PHPExceller\Shared\PHPExceller_Polynomial_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Exponential_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Linear_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Logarithmic_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Polynomial_Best_Fit;
-use PHPExceller\Shared\PHPExceller_Power_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Polynomial_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Exponential_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Linear_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Logarithmic_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Polynomial_Best_Fit;
+use PHPExceller\Shared\trend\PHPExceller_Power_Best_Fit;
 
 /**
  * PHPExceller_trendClass

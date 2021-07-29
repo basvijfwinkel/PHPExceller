@@ -1,5 +1,5 @@
 <?php
-namespace PHPExceller\Shared;
+namespace PHPExceller\Shared\DggContainer;
 
 /**
  * PHPExceller_Shared_Escher_DggContainer_BstoreContainer
