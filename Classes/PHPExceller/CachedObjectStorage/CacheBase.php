@@ -5,43 +5,21 @@ use PHPExceller\Cell;
 use PHPExceller\Worksheet;
 
 /**
- * PHPExceller_CachedObjectStorage_CacheBase
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   PHPExceller
- * @package    PHPExceller_CachedObjectStorage
- * @copyright  Copyright (c) 2021
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Based on PHPExcel_CachedObjectStorage_CacheBase
  */
 abstract class CacheBase
 {
     /**
      * Parent worksheet
      *
-     * @var PHPExceller_Worksheet
+     * @var PHPExceller\Worksheet
      */
     protected $parent;
 
     /**
      * The currently active Cell
      *
-     * @var PHPExceller_Cell
+     * @var PHPExceller\Cell
      */
     protected $currentObject = null;
 
@@ -70,12 +48,12 @@ abstract class CacheBase
     /**
      * Initialise this new cell collection
      *
-     * @param    PHPExceller_Worksheet    $parent        The worksheet for this cell collection
+     * @param    PHPExceller\Worksheet    $parent        The worksheet for this cell collection
      */
-    public function __construct(PHPExceller_Worksheet $parent)
+    public function __construct(Worksheet $parent)
     {
         //    Set our parent worksheet.
-        //    This is maintained within the cache controller to facilitate re-attaching it to PHPExceller_Cell objects when
+        //    This is maintained within the cache controller to facilitate re-attaching it to PHPExceller\Cell objects when
         //        they are woken from a serialized state
         $this->parent = $parent;
     }
@@ -83,7 +61,7 @@ abstract class CacheBase
     /**
      * Return the parent worksheet for this cell collection
      *
-     * @return    PHPExceller_Worksheet
+     * @return    PHPExceller\Worksheet
      */
     public function getParent()
     {
@@ -91,14 +69,15 @@ abstract class CacheBase
     }
 
     /**
-     * Is a value set in the current PHPExceller_CachedObjectStorage_ICache for an indexed cell?
+     * Is a value set in the current PHPExceller\CachedObjectStorage\ICache for an indexed cell?
      *
      * @param    string        $pCoord        Coordinate address of the cell to check
      * @return    boolean
      */
     public function isDataSet($pCoord)
     {
-        if ($pCoord === $this->currentObjectID) {
+        if ($pCoord === $this->currentObjectID)
+        {
             return true;
         }
         //    Check if the requested entry exists in the cache
@@ -114,11 +93,13 @@ abstract class CacheBase
      */
     public function moveCell($fromAddress, $toAddress)
     {
-        if ($fromAddress === $this->currentObjectID) {
+        if ($fromAddress === $this->currentObjectID)
+        {
             $this->currentObjectID = $toAddress;
         }
         $this->currentCellIsDirty = true;
-        if (isset($this->cellCache[$fromAddress])) {
+        if (isset($this->cellCache[$fromAddress]))
+        {
             $this->cellCache[$toAddress] = &$this->cellCache[$fromAddress];
             unset($this->cellCache[$fromAddress]);
         }
@@ -129,11 +110,11 @@ abstract class CacheBase
     /**
      * Add or Update a cell in cache
      *
-     * @param    PHPExceller_Cell    $cell        Cell to update
-     * @return    PHPExceller_Cell
-     * @throws    PHPExceller_Exception
+     * @param    PHPExceller\Cell    $cell        Cell to update
+     * @return    PHPExceller\Cell
+     * @throws    PHPExceller\Exception
      */
-    public function updateCacheData(PHPExceller_Cell $cell)
+    public function updateCacheData(Cell $cell)
     {
         return $this->addCacheData($cell->getCoordinate(), $cell);
     }
@@ -142,16 +123,18 @@ abstract class CacheBase
      * Delete a cell in cache identified by coordinate address
      *
      * @param    string            $pCoord        Coordinate address of the cell to delete
-     * @throws    PHPExceller_Exception
+     * @throws    PHPExceller\Exception
      */
     public function deleteCacheData($pCoord)
     {
-        if ($pCoord === $this->currentObjectID && !is_null($this->currentObject)) {
+        if ($pCoord === $this->currentObjectID && !is_null($this->currentObject))
+        {
             $this->currentObject->detach();
             $this->currentObjectID = $this->currentObject = null;
         }
 
-        if (is_object($this->cellCache[$pCoord])) {
+        if (is_object($this->cellCache[$pCoord]))
+        {
             $this->cellCache[$pCoord]->detach();
             unset($this->cellCache[$pCoord]);
         }
@@ -176,7 +159,8 @@ abstract class CacheBase
     public function getSortedCellList()
     {
         $sortKeys = array();
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $column, $row);
             $sortKeys[sprintf('%09d%3s', $row, $column)] = $coord;
         }
@@ -195,21 +179,23 @@ abstract class CacheBase
         // Lookup highest column and highest row
         $col = array('A' => '1A');
         $row = array(1);
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $c, $r);
             $row[$r] = $r;
             $col[$c] = strlen($c).$c;
         }
-        if (!empty($row)) {
+        if (!empty($row))
+        {
             // Determine highest column and row
             $highestRow = max($row);
             $highestColumn = substr(max($col), 1);
         }
 
         return array(
-            'row'    => $highestRow,
-            'column' => $highestColumn
-        );
+                      'row'    => $highestRow,
+                      'column' => $highestColumn
+                    );
     }
 
     /**
@@ -253,20 +239,23 @@ abstract class CacheBase
      */
     public function getHighestColumn($row = null)
     {
-        if ($row == null) {
+        if ($row == null)
+        {
             $colRow = $this->getHighestRowAndColumn();
             return $colRow['column'];
         }
 
         $columnList = array(1);
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $c, $r);
-            if ($r != $row) {
+            if ($r != $row)
+            {
                 continue;
             }
-            $columnList[] = PHPExceller_Cell::columnIndexFromString($c);
+            $columnList[] = Cell::columnIndexFromString($c);
         }
-        return PHPExceller_Cell::stringFromColumnIndex(max($columnList) - 1);
+        return Cell::stringFromColumnIndex(max($columnList) - 1);
     }
 
     /**
@@ -278,15 +267,18 @@ abstract class CacheBase
      */
     public function getHighestRow($column = null)
     {
-        if ($column == null) {
+        if ($column == null)
+        {
             $colRow = $this->getHighestRowAndColumn();
             return $colRow['row'];
         }
 
         $rowList = array(0);
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $c, $r);
-            if ($c != $column) {
+            if ($c != $column)
+            {
                 continue;
             }
             $rowList[] = $r;
@@ -302,9 +294,12 @@ abstract class CacheBase
      */
     protected function getUniqueID()
     {
-        if (function_exists('posix_getpid')) {
+        if (function_exists('posix_getpid'))
+        {
             $baseUnique = posix_getpid();
-        } else {
+        }
+        else
+        {
             $baseUnique = mt_rand();
         }
         return uniqid($baseUnique, true);
@@ -313,19 +308,20 @@ abstract class CacheBase
     /**
      * Clone the cell collection
      *
-     * @param    PHPExceller_Worksheet    $parent        The new worksheet
+     * @param    PHPExceller\Worksheet    $parent        The new worksheet
      * @return    void
      */
-    public function copyCellCollection(PHPExceller_Worksheet $parent)
+    public function copyCellCollection(Worksheet $parent)
     {
         $this->currentCellIsDirty;
         $this->storeData();
 
         $this->parent = $parent;
-        if (($this->currentObject !== null) && (is_object($this->currentObject))) {
+        if (($this->currentObject !== null) && (is_object($this->currentObject))) 
+        {
             $this->currentObject->attach($this);
         }
-    }    //    function copyCellCollection()
+    }
 
     /**
      * Remove a row, deleting all cells in that row
@@ -335,9 +331,11 @@ abstract class CacheBase
      */
     public function removeRow($row)
     {
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $c, $r);
-            if ($r == $row) {
+            if ($r == $row)
+            {
                 $this->deleteCacheData($coord);
             }
         }
@@ -351,9 +349,11 @@ abstract class CacheBase
      */
     public function removeColumn($column)
     {
-        foreach ($this->getCellList() as $coord) {
+        foreach ($this->getCellList() as $coord)
+        {
             sscanf($coord, '%[A-Z]%d', $c, $r);
-            if ($c == $column) {
+            if ($c == $column)
+            {
                 $this->deleteCacheData($coord);
             }
         }

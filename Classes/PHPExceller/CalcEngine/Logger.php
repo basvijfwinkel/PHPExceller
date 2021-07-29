@@ -4,29 +4,7 @@ namespace PHPExceller\CalcEngine;
 use PHPExceller\CalcEngine\CyclicReferenceStack;
 
 /**
- * PHPExceller_CalcEngine_Logger
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   PHPExceller
- * @package    PHPExceller_Calculation
- * @copyright  Copyright (c) 2021 PHPExceller (http://www.codeplex.com/PHPExceller)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Based in PHPExcel_CalcEngine_Logger
  */
 class Logger
 {
@@ -59,16 +37,16 @@ class Logger
     /**
      * The calculation engine cell reference stack
      *
-     * @var PHPExceller_CalcEngine_CyclicReferenceStack
+     * @var PHPExceller\CalcEngine\CyclicReferenceStack
      */
     private $cellStack;
 
     /**
      * Instantiate a Calculation engine logger
      *
-     * @param  PHPExceller_CalcEngine_CyclicReferenceStack $stack
+     * @param  PHPExceller\CalcEngine\CyclicReferenceStack $stack
      */
-    public function __construct(PHPExceller_CalcEngine_CyclicReferenceStack $stack)
+    public function __construct(CyclicReferenceStack $stack)
     {
         $this->cellStack = $stack;
     }
@@ -119,18 +97,15 @@ class Logger
     public function writeDebugLog()
     {
         //    Only write the debug log if logging is enabled
-        if ($this->writeDebugLog) {
+        if ($this->writeDebugLog)
+        {
             $message = implode(func_get_args());
             $cellReference = implode(' -> ', $this->cellStack->showStack());
-            if ($this->echoDebugLog) {
-                echo $cellReference,
-                    ($this->cellStack->count() > 0 ? ' => ' : ''),
-                    $message,
-                    PHP_EOL;
+            if ($this->echoDebugLog)
+            {
+                echo $cellReference, ($this->cellStack->count() > 0 ? ' => ' : ''), $message, PHP_EOL;
             }
-            $this->debugLog[] = $cellReference .
-                ($this->cellStack->count() > 0 ? ' => ' : '') .
-                $message;
+            $this->debugLog[] = $cellReference . ($this->cellStack->count() > 0 ? ' => ' : '') . $message;
         }
     }
 
