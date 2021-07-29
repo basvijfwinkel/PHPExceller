@@ -1,6 +1,18 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\PHPExceller;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+use PHPExceller\Style\PHPExceller_Style_Conditional;
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_Worksheet;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_AutoFilter_Column_Rule;
+
 /**
  * PHPExceller
  *
@@ -148,7 +160,7 @@ class PHPExceller_Writer_Excel2007_Worksheet extends PHPExceller_Writer_Excel200
         $objWriter->endElement();
 
 
-        // Return
+            // Return
         $result = $objWriter->getData();
         /* debug */
         //echo('<xmp style="white-space: pre-wrap">'.$result.'</xmp>');

@@ -1,5 +1,16 @@
 <?php
 namespace PHPExceller\Writer;
+
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\PHPExceller_Chart;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Chart\PHPExceller_Chart_Title;
+use PHPExceller\Chart\PHPExceller_Chart_PlotArea;
+use PHPExceller\Chart\PHPExceller_Chart_Title;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Chart\PHPExceller_Chart_GridLines;
+use PHPExceller\Chart\PHPExceller_Chart_DataSeries;
+
 /**
  * PHPExceller
  *
@@ -989,7 +1000,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                     $objWriter->endElement();
                 }
                 $objWriter->endElement(); //end ln
-                
+
             }
             $objWriter->startElement('a:effectLst');
 
@@ -1004,7 +1015,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->endElement(); //end alpha
                 $objWriter->endElement(); //end schemeClr
                 $objWriter->endElement(); //end glow
-                
+
             }
 
             if (!is_null($majorGridlines->getShadowProperty('presets')))
@@ -1077,7 +1088,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->endElement(); //end alpha
                 $objWriter->endElement(); //end color:type
                 $objWriter->endElement(); //end shadow
-                
+
             }
 
             if (!is_null($majorGridlines->getSoftEdgesSize()))
@@ -1085,13 +1096,13 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->startElement('a:softEdge');
                 $objWriter->writeAttribute('rad', $majorGridlines->getSoftEdgesSize());
                 $objWriter->endElement(); //end softEdge
-                
+
             }
 
             $objWriter->endElement(); //end effectLst
             $objWriter->endElement(); //end spPr
             $objWriter->endElement(); //end majorGridLines
-            
+
         }
 
         if ($minorGridlines->getObjectState())
@@ -1161,7 +1172,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                     $objWriter->endElement();
                 }
                 $objWriter->endElement(); //end ln
-                
+
             }
 
             $objWriter->startElement('a:effectLst');
@@ -1177,7 +1188,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->endElement(); //end alpha
                 $objWriter->endElement(); //end schemeClr
                 $objWriter->endElement(); //end glow
-                
+
             }
 
             if (!is_null($minorGridlines->getShadowProperty('presets')))
@@ -1249,7 +1260,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->endElement(); //end alpha
                 $objWriter->endElement(); //end color:type
                 $objWriter->endElement(); //end shadow
-                
+
             }
 
             if (!is_null($minorGridlines->getSoftEdgesSize()))
@@ -1257,13 +1268,13 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                 $objWriter->startElement('a:softEdge');
                 $objWriter->writeAttribute('rad', $minorGridlines->getSoftEdgesSize());
                 $objWriter->endElement(); //end softEdge
-                
+
             }
 
             $objWriter->endElement(); //end effectLst
             $objWriter->endElement(); //end spPr
             $objWriter->endElement(); //end minorGridLines
-            
+
         }
 
         if (!is_null($yAxisLabel))
@@ -1968,7 +1979,7 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
                         }
                     }
                     //----------------
-                    
+
                 }
             }
 
@@ -2728,5 +2739,4 @@ class PHPExceller_Writer_Excel2007_Chart extends PHPExceller_Writer_Excel2007_Wr
 
         $objWriter->endElement();
     }
-
 }

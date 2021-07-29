@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\Worksheet\PHPExceller_Worksheet_Dimension;
+
 /**
  * PHPExceller_Worksheet_ColumnDimension
  *

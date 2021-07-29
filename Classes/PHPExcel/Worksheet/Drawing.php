@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\Worksheet\PHPExceller_Worksheet_BaseDrawing;
+use PHPExceller\PHPExceller_IComparable;
+
 /**
  * PHPExceller_Worksheet_Drawing
  *

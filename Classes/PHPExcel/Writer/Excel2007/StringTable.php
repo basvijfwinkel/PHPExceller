@@ -1,6 +1,12 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Cell\PHPExceller_Cell_DataType;
+use PHPExceller\PHPExceller_RichText;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\Shared\PHPExceller_Shared_String;
+
 /**
  * PHPExceller_Writer_Excel2007_StringTable
  *

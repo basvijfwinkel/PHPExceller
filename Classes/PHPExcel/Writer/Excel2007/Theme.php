@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\PHPExceller;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+
 /**
  * PHPExceller
  *
@@ -841,7 +845,8 @@ class PHPExceller_Writer_Excel2007_Theme extends PHPExceller_Writer_Excel2007_Wr
         $objWriter->writeAttribute('typeface', '');
         $objWriter->endElement();
 
-        foreach ($fontSet as $fontScript => $typeface) {
+        foreach ($fontSet as $fontScript => $typeface)
+        {
             $objWriter->startElement('a:font');
                 $objWriter->writeAttribute('script', $fontScript);
                 $objWriter->writeAttribute('typeface', $typeface);

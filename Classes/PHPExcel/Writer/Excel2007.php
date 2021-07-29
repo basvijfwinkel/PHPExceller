@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\PHPExceller;
+use PHPExceller\Writer\PHPExceller_Writer_Abstract;
+use PHPExceller\Writer\PHPExceller_Writer_IWriter;
+use PHPExceller\Shared\PHPExceller_Shared_File;
+use PHPExceller\PHPExceller_Calculation;
+use PHPExceller\Calculation\PHPExceller_Calculation_Functions;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+
 /**
  * PHPExceller_Writer_Excel2007
  *
@@ -307,7 +315,6 @@ class PHPExceller_Writer_Excel2007 extends PHPExceller_Writer_Abstract implement
                 }
             }
 
-            
             // Add media (first add the media so we know the rId)
             $insertionCounter = 10000;
             $addedMediaReferences = array();

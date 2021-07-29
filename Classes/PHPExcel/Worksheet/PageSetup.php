@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller
  *

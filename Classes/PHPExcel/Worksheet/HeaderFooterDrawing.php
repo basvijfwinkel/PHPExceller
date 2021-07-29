@@ -1,6 +1,10 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\Worksheet\PHPExceller_Worksheet_Drawing;
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Worksheet_HeaderFooterDrawing
  *

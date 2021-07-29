@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\Shared\PHPExceller_Shared_PasswordHasher;
+
 /**
  * PHPExceller
  *

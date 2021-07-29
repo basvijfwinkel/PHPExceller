@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\Worksheet\PHPExceller_Worksheet_RowCellIterator;
+use PHPExceller\PHPExceller_Worksheet;
+
 /**
  * PHPExceller_Worksheet_Row
  *

@@ -1,6 +1,7 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\PHPExceller_Exception;
 /**
  * PHPExceller_Writer_Exception
  *

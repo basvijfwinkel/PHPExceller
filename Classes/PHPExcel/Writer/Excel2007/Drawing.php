@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_BaseDrawing;
+use PHPExceller\Shared\PHPExceller_Shared_Drawing;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_HeaderFooterDrawing;
+
 /**
  * PHPExceller_Writer_Excel2007_Drawing
  *

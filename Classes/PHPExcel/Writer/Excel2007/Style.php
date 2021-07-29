@@ -1,6 +1,14 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\PHPExceller;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+use PHPExceller\Style\PHPExceller_Style_Fill;
+use PHPExceller\Style\PHPExceller_Style_Borders;
+use PHPExceller\Style\PHPExceller_Style_Border;
+use PHPExceller\Style\PHPExceller_Style_NumberFormat;
+
 /**
  * PHPExceller
  *
@@ -636,11 +644,12 @@ class PHPExceller_Writer_Excel2007_Style extends PHPExceller_Writer_Excel2007_Wr
     {
         // do not add FILL_NONE fill styles because they must point to the first style we added above here
         if ($style->getFill()->getFillType() != PHPExceller_Style_Fill::FILL_NONE)  
-        {                                         
-        if (!array_key_exists($style->getFill()->getHashCode(), $aFills)) {
-            $aFills[ $style->getFill()->getHashCode() ] = $style->getFill();
+        {
+            if (!array_key_exists($style->getFill()->getHashCode(), $aFills))
+            {
+                $aFills[ $style->getFill()->getHashCode() ] = $style->getFill();
+            }
         }
-        }                                         
     }
     return $aFills;
     }

@@ -1,6 +1,12 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use Iterator;
+use PHPExceller\Worksheet\PHPExceller_Worksheet_CellIterator;
+use PHPExceller\PHPExceller_Worksheet;
+use PHPExceller\PHPExceller_Cell;
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Worksheet_ColumnCellIterator
  *

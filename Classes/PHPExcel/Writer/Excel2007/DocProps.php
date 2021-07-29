@@ -1,6 +1,11 @@
 <?php
 namespace PHPExceller\Writer;
 
+use PHPExceller\Writer\PHPExceller_Writer_Excel2007_WriterPart;
+use PHPExceller\Writer\PHPExceller_Writer_Exception;
+use PHPExceller\PHPExceller;
+use PHPExceller\Shared\PHPExceller_Shared_XMLWriter;
+
 /**
  * PHPExceller_Writer_Excel2007_DocProps
  *

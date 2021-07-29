@@ -1,6 +1,8 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\PHPExceller_Exception;
+
 /**
  * PHPExceller_Worksheet_SheetView
  *

@@ -1,6 +1,9 @@
 <?php
 namespace PHPExceller\Worksheet;
 
+use PHPExceller\PHPExceller_IComparable;
+use PHPExceller\Style\PHPExceller_Style_Color;
+
 /**
  * PHPExceller_Worksheet_Drawing_Shadow
  *
