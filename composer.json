@@ -23,7 +23,6 @@
     },
     "autoload": {
                    "psr-4": {"PHPExceller\\": "Classes/"}
-                }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
