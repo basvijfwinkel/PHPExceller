@@ -6,29 +6,7 @@ use PHPExceller\Calculation\Statistical;
 use PHPExceller\Calculation\MathTrig;
 
 /**
- * PHPExceller_Calculation_Database
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Calculation
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
+ * Based on PHPExceller_Calculation_Database
  */
 class Database
 {
@@ -52,10 +30,11 @@ class Database
      */
     private static function fieldExtract($database, $field)
     {
-        $field = strtoupper(PHPExceller_Calculation_Functions::flattenSingleValue($field));
+        $field = strtoupper(Functions::flattenSingleValue($field));
         $fieldNames = array_map('strtoupper', array_shift($database));
 
-        if (is_numeric($field)) {
+        if (is_numeric($field))
+        {
             $keys = array_keys($fieldNames);
             return $keys[$field-1];
         }
@@ -90,46 +69,60 @@ class Database
         //    Convert the criteria into a set of AND/OR conditions with [:placeholders]
         $testConditions = $testValues = array();
         $testConditionsCount = 0;
-        foreach ($criteriaNames as $key => $criteriaName) {
+        foreach ($criteriaNames as $key => $criteriaName)
+        {
             $testCondition = array();
             $testConditionCount = 0;
-            foreach ($criteria as $row => $criterion) {
-                if ($criterion[$key] > '') {
-                    $testCondition[] = '[:'.$criteriaName.']'.PHPExceller_Calculation_Functions::ifCondition($criterion[$key]);
+            foreach ($criteria as $row => $criterion)
+            {
+                if ($criterion[$key] > '')
+                {
+                    $testCondition[] = '[:'.$criteriaName.']'.Functions::ifCondition($criterion[$key]);
                     $testConditionCount++;
                 }
             }
-            if ($testConditionCount > 1) {
+            if ($testConditionCount > 1)
+            {
                 $testConditions[] = 'OR(' . implode(',', $testCondition) . ')';
                 $testConditionsCount++;
-            } elseif ($testConditionCount == 1) {
+            }
+            elseif ($testConditionCount == 1)
+            {
                 $testConditions[] = $testCondition[0];
                 $testConditionsCount++;
             }
         }
 
-        if ($testConditionsCount > 1) {
+        if ($testConditionsCount > 1)
+        {
             $testConditionSet = 'AND(' . implode(',', $testConditions) . ')';
-        } elseif ($testConditionsCount == 1) {
+        }
+        elseif ($testConditionsCount == 1)
+        {
             $testConditionSet = $testConditions[0];
         }
 
         //    Loop through each row of the database
-        foreach ($database as $dataRow => $dataValues) {
+        foreach ($database as $dataRow => $dataValues)
+        {
             //    Substitute actual values from the database row for our [:placeholders]
             $testConditionList = $testConditionSet;
-            foreach ($criteriaNames as $key => $criteriaName) {
+            foreach ($criteriaNames as $key => $criteriaName)
+            {
                 $k = array_search($criteriaName, $fieldNames);
-                if (isset($dataValues[$k])) {
+                if (isset($dataValues[$k]))
+                {
                     $dataValue = $dataValues[$k];
-                    $dataValue = (is_string($dataValue)) ? PHPExceller_Calculation::wrapResult(strtoupper($dataValue)) : $dataValue;
+                    $dataValue = (is_string($dataValue)) ? wrapResult(strtoupper($dataValue)) : $dataValue;
                     $testConditionList = str_replace('[:' . $criteriaName . ']', $dataValue, $testConditionList);
                 }
             }
+
             //    evaluate the criteria against the row data
-            $result = PHPExceller_Calculation::getInstance()->_calculateFormulaValue('='.$testConditionList);
+            $result = Calculation::getInstance()->_calculateFormulaValue('='.$testConditionList);
             //    If the row failed to meet the criteria, remove it from the database
-            if (!$result) {
+            if (!$result)
+            {
                 unset($database[$dataRow]);
             }
         }
@@ -144,7 +137,8 @@ class Database
         $database = self::filter($database, $criteria);
         //    extract an array of values for the requested column
         $colData = array();
-        foreach ($database as $row) {
+        foreach ($database as $row)
+        {
             $colData[] = $row[$field];
         }
         return $colData;
@@ -180,14 +174,13 @@ class Database
     public static function DAVERAGE($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::AVERAGE(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::AVERAGE(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -228,14 +221,13 @@ class Database
     public static function DCOUNT($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::COUNT(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::COUNT(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -272,7 +264,8 @@ class Database
     public static function DCOUNTA($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
@@ -280,14 +273,13 @@ class Database
         $database = self::filter($database, $criteria);
         //    extract an array of values for the requested column
         $colData = array();
-        foreach ($database as $row) {
+        foreach ($database as $row)
+        {
             $colData[] = $row[$field];
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::COUNTA(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::COUNTA(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -322,14 +314,16 @@ class Database
     public static function DGET($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
         $colData = self::getFilteredColumn($database, $field, $criteria);
-        if (count($colData) > 1) {
-            return PHPExceller_Calculation_Functions::NaN();
+        if (count($colData) > 1)
+        {
+            return Functions::NaN();
         }
 
         return $colData[0];
@@ -367,14 +361,13 @@ class Database
     public static function DMAX($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::MAX(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::MAX(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -409,14 +402,13 @@ class Database
     public static function DMIN($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::MIN(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::MIN(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -450,14 +442,13 @@ class Database
     public static function DPRODUCT($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_MathTrig::PRODUCT(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return MathTrig::PRODUCT(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -492,14 +483,13 @@ class Database
     public static function DSTDEV($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::STDEV(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::STDEV(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -534,14 +524,13 @@ class Database
     public static function DSTDEVP($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::STDEVP(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::STDEVP(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -575,14 +564,13 @@ class Database
     public static function DSUM($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_MathTrig::SUM(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return MathTrig::SUM(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -617,14 +605,13 @@ class Database
     public static function DVAR($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::VARFunc(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::VARFunc(self::getFilteredColumn($database, $field, $criteria));
     }
 
 
@@ -659,13 +646,12 @@ class Database
     public static function DVARP($database, $field, $criteria)
     {
         $field = self::fieldExtract($database, $field);
-        if (is_null($field)) {
+        if (is_null($field))
+        {
             return null;
         }
 
         // Return
-        return PHPExceller_Calculation_Statistical::VARP(
-            self::getFilteredColumn($database, $field, $criteria)
-        );
+        return Statistical::VARP(self::getFilteredColumn($database, $field, $criteria));
     }
 }
