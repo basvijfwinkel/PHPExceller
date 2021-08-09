@@ -5,31 +5,10 @@ use PHPExceller\Chart\Exception;
 use PHPExceller\Calculation\Functions;
 use PHPExceller\Calculation;
 use PHPExceller\Worksheet;
+use PHPExceller\Cell;
 
 /**
- * PHPExceller_Chart_DataSeriesValues
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package     PHPExceller_Chart
- * @copyright   Copyright (c) 2021 PHPExceller
- * @license     http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
+ * Based on PHPExcel_Chart_DataSeriesValues
  */
 
 class DataSeriesValues
@@ -121,7 +100,7 @@ class DataSeriesValues
     private $dataValues = array();
 
     /**
-     * Create a new PHPExceller_Chart_DataSeriesValues object
+     * Create a new DataSeriesValues object
      */
     public function __construct($dataType = self::DATASERIES_TYPE_NUMBER,
                                 $dataSource = null,
@@ -152,15 +131,15 @@ class DataSeriesValues
      *
      * @param    string    $dataType    Datatype of this data series
      *                                Typical values are:
-     *                                    PHPExceller_Chart_DataSeriesValues::DATASERIES_TYPE_STRING
+     *                                    DataSeriesValues::DATASERIES_TYPE_STRING
      *                                        Normally used for axis point values
-     *                                    PHPExceller_Chart_DataSeriesValues::DATASERIES_TYPE_NUMBER
+     *                                    DataSeriesValues::DATASERIES_TYPE_NUMBER
      *                                        Normally used for chart data values
      * @return  void
      */
     public function setDataType($dataType = self::DATASERIES_TYPE_NUMBER) {
         if (!in_array($dataType, self::$dataTypeValues)) {
-            throw new PHPExceller_Chart_Exception('Invalid datatype for chart data series values');
+            throw new Chart_Exception('Invalid datatype for chart data series values');
         }
         this->dataType = $dataType;
     }
@@ -313,7 +292,7 @@ class DataSeriesValues
      * @return  void
      */
     public function setDataValues($dataValues = array(), $refreshDataSource = TRUE) {
-        this->dataValues = PHPExceller_Calculation_Functions::flattenArray($dataValues);
+        this->dataValues = Functions::flattenArray($dataValues);
         this->pointCount = count($dataValues);
 
         if ($refreshDataSource) {
@@ -325,10 +304,10 @@ class DataSeriesValues
         return $var !== NULL;
     }
 
-    public function refresh(PHPExceller_Worksheet $worksheet, $flatten = TRUE) {
+    public function refresh(Worksheet $worksheet, $flatten = TRUE) {
         if (this->dataSource !== NULL) {
-            $calcEngine = PHPExceller_Calculation::getInstance($worksheet->getParent());
-            $newDataValues = PHPExceller_Calculation::_unwrapResult(
+            $calcEngine = Calculation::getInstance($worksheet->getParent());
+            $newDataValues = Calculation::_unwrapResult(
                 $calcEngine->_calculateFormulaValue(
                     '='.this->dataSource,
                     NULL,
@@ -336,7 +315,7 @@ class DataSeriesValues
                 )
             );
             if ($flatten) {
-                this->dataValues = PHPExceller_Calculation_Functions::flattenArray($newDataValues);
+                this->dataValues = Functions::flattenArray($newDataValues);
                 foreach(this->dataValues as &$dataValue) {
                     if ((!empty($dataValue)) && ($dataValue[0] == '#')) {
                         $dataValue = 0.0;
@@ -349,9 +328,9 @@ class DataSeriesValues
                     list(,$cellRange) = $cellRange;
                 }
 
-                $dimensions = PHPExceller_Cell::rangeDimension(str_replace('$','',$cellRange));
+                $dimensions = Cell::rangeDimension(str_replace('$','',$cellRange));
                 if (($dimensions[0] == 1) || ($dimensions[1] == 1)) {
-                    this->dataValues = PHPExceller_Calculation_Functions::flattenArray($newDataValues);
+                    this->dataValues = Functions::flattenArray($newDataValues);
                 } else {
                     $newArray = array_values(array_shift($newDataValues));
                     foreach($newArray as $i => $newDataSet) {
@@ -383,10 +362,10 @@ class DataSeriesValues
             $cellRange = explode('!', $this->dataSource);
             if (count($cellRange) > 1) { list(, $cellRange) = $cellRange; }
 
-            $dimensions = PHPExceller_Cell::rangeDimension(str_replace('$', '', $cellRange));
+            $dimensions = Cell::rangeDimension(str_replace('$', '', $cellRange));
             if (($dimensions[0] == 1) || ($dimensions[1] == 1))
             {
-                $this->dataValues = PHPExceller_Calculation_Functions::flattenArray($newDataValues);
+                $this->dataValues = Functions::flattenArray($newDataValues);
             }
             else
             {

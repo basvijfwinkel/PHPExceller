@@ -1,10 +1,10 @@
 <?php
-namespace PHPExceller\Calculation;
+namespace PHPExceller;
 
-use PHPExceller\Exception;
+use Exception;
 
 /**
- * PHPExceller_Calculation_Exception
+ * PHPExceller
  *
  * Copyright (c) 2021 PHPExceller
  *
@@ -23,12 +23,21 @@ use PHPExceller\Exception;
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @category   PHPExceller
- * @package    PHPExceller_Calculation
- * @copyright  Copyright (c) 2021 PHPExceller
+ * @package    PHPExceller
+ * @copyright  Copyright (c) 2021
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
-class Exception extends PHPExceller_Exception
+
+
+/**
+ * PHPExceller_Exception
+ *
+ * @category   PHPExceller
+ * @package    PHPExceller
+ * @copyright  Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
+ */
+class PHPExceller_Exception extends Exception
 {
     /**
      * Error handler callback

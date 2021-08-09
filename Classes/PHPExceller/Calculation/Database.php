@@ -6,7 +6,7 @@ use PHPExceller\Calculation\Statistical;
 use PHPExceller\Calculation\MathTrig;
 
 /**
- * Based on PHPExceller_Calculation_Database
+ * Based on PHPExcel_Calculation_Database
  */
 class Database
 {

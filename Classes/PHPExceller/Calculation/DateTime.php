@@ -4,6 +4,7 @@ namespace PHPExceller\Calculation;
 use DateTime;
 use PHPExceller\Calculation\Functions;
 use PHPExceller\Shared\Date;
+use PHPExceller\Shared\String;
 
 /**
  * Based on PHPExcel_Calculation_DateTime
@@ -86,7 +87,7 @@ class DateTime
             }
             if ((is_object($dateValue)) && ($dateValue instanceof DateTime))
             {
-                $dateValue = PHPExceller_Shared_Date::PHPToExcel($dateValue);
+                $dateValue = Date::PHPToExcel($dateValue);
             }
             else
             {
@@ -119,7 +120,7 @@ class DateTime
     private static function adjustDateByMonths($dateValue = 0, $adjustmentMonths = 0)
     {
         // Execute function
-        $PHPDateObject = PHPExceller_Shared_Date::ExcelToPHPObject($dateValue);
+        $PHPDateObject = Date::ExcelToPHPObject($dateValue);
         $oMonth = (int) $PHPDateObject->format('m');
         $oYear = (int) $PHPDateObject->format('Y');
 
@@ -173,7 +174,7 @@ class DateTime
         switch (Functions::getReturnDateType())
         {
             case Functions::RETURNDATE_EXCEL:
-                $retValue = (float) PHPExceller_Shared_Date::PHPToExcel(time());
+                $retValue = (float) Date::PHPToExcel(time());
                 break;
             case Functions::RETURNDATE_PHP_NUMERIC:
                 $retValue = (integer) time();
@@ -297,9 +298,9 @@ class DateTime
             $day = Date::dayStringToNumber($day);
         }
 
-        $year = ($year !== null) ? PHPExceller_Shared_String::testStringAsNumeric($year) : 0;
-        $month = ($month !== null) ? PHPExceller_Shared_String::testStringAsNumeric($month) : 0;
-        $day = ($day !== null) ? PHPExceller_Shared_String::testStringAsNumeric($day) : 0;
+        $year = ($year !== null) ? String::testStringAsNumeric($year) : 0;
+        $month = ($month !== null) ? String::testStringAsNumeric($month) : 0;
+        $day = ($day !== null) ? String::testStringAsNumeric($day) : 0;
         if ((!is_numeric($year)) ||
             (!is_numeric($month)) ||
             (!is_numeric($day)))

@@ -2,30 +2,9 @@
 namespace PHPExceller\Cell;
 
 /**
- * PHPExceller_Cell_DataValidation
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   PHPExceller
- * @package    PHPExceller_Cell
- * @copyright  Copyright (c) 2021 PHPExceller
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Based on PHPExcel_Cell_DataValidation
  */
+
 class DataValidation
 {
     /* Data validation types */
@@ -72,14 +51,14 @@ class DataValidation
      *
      * @var string
      */
-    private $type = PHPExceller_Cell_DataValidation::TYPE_NONE;
+    private $type = DataValidation::TYPE_NONE;
 
     /**
      * Error style
      *
      * @var string
      */
-    private $errorStyle = PHPExceller_Cell_DataValidation::STYLE_STOP;
+    private $errorStyle = DataValidation::STYLE_STOP;
 
     /**
      * Operator
@@ -145,15 +124,15 @@ class DataValidation
     private $prompt;
 
     /**
-     * Create a new PHPExceller_Cell_DataValidation
+     * Create a new DataValidation
      */
     public function __construct()
     {
         // Initialise member variables
         $this->formula1          = '';
         $this->formula2          = '';
-        $this->type              = PHPExceller_Cell_DataValidation::TYPE_NONE;
-        $this->errorStyle        = PHPExceller_Cell_DataValidation::STYLE_STOP;
+        $this->type              = DataValidation::TYPE_NONE;
+        $this->errorStyle        = DataValidation::STYLE_STOP;
         $this->operator          = '';
         $this->allowBlank        = false;
         $this->showDropDown      = false;
@@ -223,7 +202,7 @@ class DataValidation
      * @param  string    $value
      * @return void
      */
-    public function setType($value = PHPExceller_Cell_DataValidation::TYPE_NONE)
+    public function setType($value = DataValidation::TYPE_NONE)
     {
         $this->type = $value;
     }
@@ -244,7 +223,7 @@ class DataValidation
      * @param  string    $value
      * @return void
      */
-    public function setErrorStyle($value = PHPExceller_Cell_DataValidation::STYLE_STOP)
+    public function setErrorStyle($value = DataValidation::STYLE_STOP)
     {
         $this->errorStyle = $value;
     }
@@ -448,8 +427,8 @@ class DataValidation
         return md5(
             $this->formula1 .
             $this->formula2 .
-            $this->type = PHPExceller_Cell_DataValidation::TYPE_NONE .
-            $this->errorStyle = PHPExceller_Cell_DataValidation::STYLE_STOP .
+            $this->type = DataValidation::TYPE_NONE .
+            $this->errorStyle = DataValidation::STYLE_STOP .
             $this->operator .
             ($this->allowBlank ? 't' : 'f') .
             ($this->showDropDown ? 't' : 'f') .

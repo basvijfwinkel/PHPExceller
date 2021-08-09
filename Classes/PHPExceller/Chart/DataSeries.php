@@ -1,41 +1,13 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Worksheet;
 use PHPExceller\Chart\DataSeriesValues;
 
 /**
- * PHPExceller
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Based on PHPExcel_Chart_DataSeries
  */
 
-/**
- * PHPExceller_Chart_DataSeries
- *
- * @category    PHPExceller
- * @package     PHPExceller_Chart
- * @copyright   Copyright (c) 2006 - 2015 PHPExceller (http://www.codeplex.com/PHPExceller)
- */
 class DataSeries
 {
     const TYPE_BARCHART        = 'barChart';
@@ -110,14 +82,14 @@ class DataSeries
     /**
      * Plot Label
      *
-     * @var array of PHPExceller_Chart_DataSeriesValues
+     * @var array of DataSeriesValues
      */
     private $plotLabel = array();
 
     /**
      * Plot Category
      *
-     * @var array of PHPExceller_Chart_DataSeriesValues
+     * @var array of DataSeriesValues
      */
     private $plotCategory = array();
 
@@ -131,27 +103,27 @@ class DataSeries
     /**
      * Plot Values
      *
-     * @var array of PHPExceller_Chart_DataSeriesValues
+     * @var array of DataSeriesValues
      */
     private $plotValues = array();
 
     /**
      * Plot Bubble Sizes
      *
-     * @var array of PHPExceller_Chart_DataSeriesValues
+     * @var array of DataSeriesValues
      */
     private $plotBubbleChartSizes = array();
 
     /**
      * Plot Bubble Labels
      *
-     * @var array of PHPExceller_Chart_DataSeriesValues
+     * @var array of DataSeriesValues
      */
     private $plotBubbleChartLabels = array();
 
     private $plotBubbleScale = 100;
     /**
-     * Create a new PHPExceller_Chart_DataSeries
+     * Create a new DataSeries
      */
     public function __construct($plotType = null,
                                     $plotGrouping = null,
@@ -173,12 +145,12 @@ class DataSeries
         $keys = array_keys($plotValues);
         $this->plotValues = $plotValues;
         if ((count($plotLabel) == 0) || (is_null($plotLabel[$keys[0]]))) {
-            $plotLabel[$keys[0]] = new PHPExceller_Chart_DataSeriesValues();
+            $plotLabel[$keys[0]] = new DataSeriesValues();
         }
 
         $this->plotLabel = $plotLabel;
         if ((count($plotCategory) == 0) || (is_null($plotCategory[$keys[0]]))) {
-            $plotCategory[$keys[0]] = new PHPExceller_Chart_DataSeriesValues();
+            $plotCategory[$keys[0]] = new DataSeriesValues();
         }
         $this->plotCategory = $plotCategory;
         $this->smoothLine = $smoothLine;
@@ -245,7 +217,7 @@ class DataSeries
      * Set Plot Grouping Type
      *
      * @param string $groupingType
-     * @return PHPExceller_Chart_DataSeries
+     * @return DataSeries
      */
     public function setPlotGrouping($groupingType = null) {
         $this->plotGrouping = $groupingType;
@@ -294,7 +266,7 @@ class DataSeries
     /**
      * Get Plot Labels
      *
-     * @return array of PHPExceller_Chart_DataSeriesValues
+     * @return array of DataSeriesValues
      */
     public function getPlotLabels() {
         return $this->plotLabel;
@@ -303,7 +275,7 @@ class DataSeries
     /**
      * Get Plot Label by Index
      *
-     * @return PHPExceller_Chart_DataSeriesValues
+     * @return DataSeriesValues
      */
     public function getPlotLabelByIndex($index) {
         $keys = array_keys($this->plotLabel);
@@ -318,7 +290,7 @@ class DataSeries
     /**
      * Get Plot Categories
      *
-     * @return array of PHPExceller_Chart_DataSeriesValues
+     * @return array of DataSeriesValues
      */
     public function getPlotCategories() {
         return $this->plotCategory;
@@ -327,7 +299,7 @@ class DataSeries
     /**
      * Get Plot Category by Index
      *
-     * @return PHPExceller_Chart_DataSeriesValues
+     * @return DataSeriesValues
      */
     public function getPlotCategoryByIndex($index) {
         $keys = array_keys($this->plotCategory);
@@ -352,7 +324,7 @@ class DataSeries
     /**
      * Get Plot Values
      *
-     * @return array of PHPExceller_Chart_DataSeriesValues
+     * @return array of DataSeriesValues
      */
     public function getPlotValues() {
         return $this->plotValues;
@@ -361,7 +333,7 @@ class DataSeries
     /**
      * Get Plot Bubble Chart Sizes
      *
-     * @return array of PHPExceller_Chart_DataSeriesValues
+     * @return array of DataSeriesValues
      */
     public function getBubbleChartSizes() {
         return $this->plotBubbleChartSizes;
@@ -370,7 +342,7 @@ class DataSeries
     /**
      * Get Plot Bubble Chart Labels
      *
-     * @return array of PHPExceller_Chart_DataSeriesValues
+     * @return array of DataSeriesValues
      */
     public function getBubbleChartLabels() {
         return $this->plotBubbleChartLabels;
@@ -379,7 +351,7 @@ class DataSeries
     /**
      * Get Plot Values by Index
      *
-     * @return PHPExceller_Chart_DataSeriesValues
+     * @return DataSeriesValues
      */
     public function getPlotValuesByIndex($index) {
         $keys = array_keys($this->plotValues);
@@ -394,7 +366,7 @@ class DataSeries
     /**
      * Get Plot Bubble Chart Sizes by Index
      *
-     * @return PHPExceller_Chart_DataSeriesValues
+     * @return DataSeriesValues
      */
     public function getBubbleChartSizesByIndex($index) {
         $keys = array_keys($this->plotBubbleChartSizes);
@@ -409,7 +381,7 @@ class DataSeries
     /**
      * Get Plot Bubble Chart Labels by Index
      *
-     * @return PHPExceller_Chart_DataSeriesValues
+     * @return DataSeriesValues
      */
     public function getBubbleChartLabelsByIndex($index) {
         $keys = array_keys($this->plotBubbleChartLabels);
@@ -467,7 +439,7 @@ class DataSeries
         $this->smoothLine = $smoothLine;
     }
 
-    public function refresh(PHPExceller_Worksheet $worksheet) {
+    public function refresh(Worksheet $worksheet) {
         foreach($this->plotValues as $plotValues) {
             if ($plotValues !== NULL)
                 $plotValues->refresh($worksheet, TRUE);

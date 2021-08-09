@@ -2,32 +2,12 @@
 namespace PHPExceller\Calculation;
 
 use PHPExceller\Calculation\Exception;
+use PHPExceller\Calculation\Calculation_Exception;
 
 /**
- * PHPExceller_Calculation_Function
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   PHPExceller
- * @package    PHPExceller_Calculation
- * @copyright  Copyright (c) 2021 PHPExceller
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Based in PHPExcel_Calculation_Function
  */
+
 class Function
 {
     /* Function categories */
@@ -65,12 +45,12 @@ class Function
     private $PHPExcellerName;
 
     /**
-     * Create a new PHPExceller_Calculation_Function
+     * Create a new Function
      *
      * @param     string        $pCategory         Category (represented by CATEGORY_*)
      * @param     string        $pExcelName        Excel function name
      * @param     string        $pPHPExcellerName    PHPExceller function mapping
-     * @throws     PHPExceller_Calculation_Exception
+     * @throws    Calculation_Exception
      */
     public function __construct($pCategory = null, $pExcelName = null, $pPHPExcellerName = null)
     {
@@ -80,7 +60,7 @@ class Function
             $this->excelName    = $pExcelName;
             $this->PHPExcellerName = $pPHPExcellerName;
         } else {
-            throw new PHPExceller_Calculation_Exception("Invalid parameters passed.");
+            throw new Calculation_Exception("Invalid parameters passed.");
         }
     }
 
@@ -98,14 +78,14 @@ class Function
      * Set Category (represented by CATEGORY_*)
      *
      * @param     string        $value
-     * @throws     PHPExceller_Calculation_Exception
+     * @throws     Calculation_Exception
      */
     public function setCategory($value = null)
     {
         if (!is_null($value)) {
             $this->category = $value;
         } else {
-            throw new PHPExceller_Calculation_Exception("Invalid parameter passed.");
+            throw new Calculation_Exception("Invalid parameter passed.");
         }
     }
 

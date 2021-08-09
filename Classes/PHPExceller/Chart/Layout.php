@@ -2,38 +2,7 @@
 namespace PHPExceller\Chart;
 
 /**
- * PHPExceller
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
- */
-
-
-/**
- * PHPExceller_Chart_Layout
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2006 - 2014 PHPExceller (http://www.codeplex.com/PHPExceller)
+ * Based on PHPExcel_Chart_Layout
  */
 class Layout
 {
@@ -164,7 +133,7 @@ class Layout
         private $dataLabelColor = "000000";
 
     /**
-     * Create a new PHPExceller_Chart_Layout
+     * Create a new Layout
      */
     public function __construct($layout=array())
     {
@@ -464,7 +433,7 @@ class Layout
       * Set the data label position
       *  Specifies that the data label position
       *
-      * @param string / PHPExceller_Chart_Layout::LABEL_POS_CENTER LABEL_POS_TOP LABEL_POS_BOTTOM LABEL_POS_RIGHT LABEL_POS_LEFT
+      * @param string / Layout::LABEL_POS_CENTER LABEL_POS_TOP LABEL_POS_BOTTOM LABEL_POS_RIGHT LABEL_POS_LEFT
       * @return void
      */
      public function setDataLabelPosition($value) {

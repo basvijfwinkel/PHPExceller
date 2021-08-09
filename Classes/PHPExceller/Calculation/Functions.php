@@ -4,6 +4,10 @@ namespace PHPExceller\Calculation;
 use PHPExceller\Calculation;
 use PHPExceller\Calculation\Functions;
 
+/**
+ * Based on PHPExcel_Calculation_Functions
+ */
+
 /** MAX_VALUE */
 define('MAX_VALUE', 1.2e308);
 
@@ -16,32 +20,6 @@ define('MAX_ITERATIONS', 256);
 /** PRECISION */
 define('PRECISION', 8.88E-016);
 
-
-/**
- * PHPExceller_Calculation_Functions
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Calculation
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
- */
 class Functions
 {
 
@@ -53,7 +31,6 @@ class Functions
     const RETURNDATE_PHP_NUMERIC = 'P';
     const RETURNDATE_PHP_OBJECT  = 'O';
     const RETURNDATE_EXCEL       = 'E';
-
 
     /**
      * Compatibility mode to use for error checking and responses
@@ -96,9 +73,9 @@ class Functions
      * @category Function Configuration
      * @param     string        $compatibilityMode        Compatibility Mode
      *                                                Permitted values are:
-     *                                                    PHPExceller_Calculation_Functions::COMPATIBILITY_EXCEL            'Excel'
-     *                                                    PHPExceller_Calculation_Functions::COMPATIBILITY_GNUMERIC        'Gnumeric'
-     *                                                    PHPExceller_Calculation_Functions::COMPATIBILITY_OPENOFFICE    'OpenOfficeCalc'
+     *                                                    Functions::COMPATIBILITY_EXCEL            'Excel'
+     *                                                    Functions::COMPATIBILITY_GNUMERIC        'Gnumeric'
+     *                                                    Functions::COMPATIBILITY_OPENOFFICE    'OpenOfficeCalc'
      * @return     boolean    (Success or Failure)
      */
     public static function setCompatibilityMode($compatibilityMode)
@@ -120,9 +97,9 @@ class Functions
      * @category Function Configuration
      * @return     string        Compatibility Mode
      *                            Possible Return values are:
-     *                                PHPExceller_Calculation_Functions::COMPATIBILITY_EXCEL            'Excel'
-     *                                PHPExceller_Calculation_Functions::COMPATIBILITY_GNUMERIC        'Gnumeric'
-     *                                PHPExceller_Calculation_Functions::COMPATIBILITY_OPENOFFICE    'OpenOfficeCalc'
+     *                                Functions::COMPATIBILITY_EXCEL            'Excel'
+     *                                Functions::COMPATIBILITY_GNUMERIC        'Gnumeric'
+     *                                Functions::COMPATIBILITY_OPENOFFICE    'OpenOfficeCalc'
      */
     public static function getCompatibilityMode()
     {
@@ -137,9 +114,9 @@ class Functions
      * @category Function Configuration
      * @param     string    $returnDateType            Return Date Format
      *                                                Permitted values are:
-     *                                                    PHPExceller_Calculation_Functions::RETURNDATE_PHP_NUMERIC        'P'
-     *                                                    PHPExceller_Calculation_Functions::RETURNDATE_PHP_OBJECT        'O'
-     *                                                    PHPExceller_Calculation_Functions::RETURNDATE_EXCEL            'E'
+     *                                                    Functions::RETURNDATE_PHP_NUMERIC        'P'
+     *                                                    Functions::RETURNDATE_PHP_OBJECT        'O'
+     *                                                    Functions::RETURNDATE_EXCEL            'E'
      * @return     boolean                            Success or failure
      */
     public static function setReturnDateType($returnDateType)
@@ -161,9 +138,9 @@ class Functions
      * @category Function Configuration
      * @return     string        Return Date Format
      *                            Possible Return values are:
-     *                                PHPExceller_Calculation_Functions::RETURNDATE_PHP_NUMERIC        'P'
-     *                                PHPExceller_Calculation_Functions::RETURNDATE_PHP_OBJECT        'O'
-     *                                PHPExceller_Calculation_Functions::RETURNDATE_EXCEL            'E'
+     *                                Functions::RETURNDATE_PHP_NUMERIC        'P'
+     *                                Functions::RETURNDATE_PHP_OBJECT        'O'
+     *                                Functions::RETURNDATE_EXCEL            'E'
      */
     public static function getReturnDateType()
     {
@@ -311,13 +288,13 @@ class Functions
 
     public static function ifCondition($condition)
     {
-        $condition    = PHPExceller_Calculation_Functions::flattenSingleValue($condition);
+        $condition    = Functions::flattenSingleValue($condition);
         if (!isset($condition{0})) {
             $condition = '=""';
         }
         if (!in_array($condition{0}, array('>', '<', '='))) {
             if (!is_numeric($condition)) {
-                $condition = PHPExceller_Calculation::wrapResult(strtoupper($condition));
+                $condition = Calculation::wrapResult(strtoupper($condition));
             }
             return '=' . $condition;
         } else {
@@ -326,7 +303,7 @@ class Functions
 
             if (!is_numeric($operand)) {
                 $operand = str_replace('"', '""', $operand);
-                $operand = PHPExceller_Calculation::wrapResult(strtoupper($operand));
+                $operand = Calculation::wrapResult(strtoupper($operand));
             }
 
             return $operator.$operand;

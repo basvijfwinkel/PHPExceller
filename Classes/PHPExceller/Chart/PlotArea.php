@@ -5,58 +5,29 @@ use PHPExceller\Chart\Layout;
 use PHPExceller\Worksheet;
 
 /**
- * PHPExceller_Chart_PlotArea
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
+ * Based on PHPExcel_Chart_PlotArea
  */
 
-
-/**
- * PHPExceller_Chart_PlotArea
- *
- * @category    PHPExceller
- * @package     PHPExceller_Chart
- */
 class PlotArea
 {
     /**
      * PlotArea Layout
      *
-     * @var PHPExceller_Chart_Layout
+     * @var Layout
      */
     private $layout = null;
 
     /**
      * Plot Series
      *
-     * @var array of PHPExceller_Chart_DataSeries
+     * @var array of DataSeries
      */
     private $plotSeries = array();
 
     /**
-     * Create a new PHPExceller_Chart_PlotArea
+     * Create a new PlotArea
      */
-    public function __construct(PHPExceller_Chart_Layout $layout = null, $plotSeries = array())
+    public function __construct(Layout $layout = null, $plotSeries = array())
     {
         this->layout = $layout;
         this->plotSeries = $plotSeries;
@@ -65,7 +36,7 @@ class PlotArea
     /**
      * Get Layout
      *
-     * @return PHPExceller_Chart_Layout
+     * @return Layout
      */
     public function getLayout() {
         return this->layout;
@@ -74,7 +45,7 @@ class PlotArea
     /**
      * Get Number of Plot Groups
      *
-     * @return array of PHPExceller_Chart_DataSeries
+     * @return array of DataSeries
      */
     public function getPlotGroupCount() {
         return count(this->plotSeries);
@@ -96,7 +67,7 @@ class PlotArea
     /**
      * Get Plot Series
      *
-     * @return array of PHPExceller_Chart_DataSeries
+     * @return array of DataSeries
      */
     public function getPlotGroup() {
         return this->plotSeries;
@@ -105,7 +76,7 @@ class PlotArea
     /**
      * Get Plot Series by Index
      *
-     * @return PHPExceller_Chart_DataSeries
+     * @return DataSeries
      */
     public function getPlotGroupByIndex($index) {
         return this->plotSeries[$index];
@@ -114,14 +85,14 @@ class PlotArea
     /**
      * Set Plot Series
      *
-     * @param [PHPExceller_Chart_DataSeries]
+     * @param [DataSeries]
      * @return void
      */
     public function setPlotSeries($plotSeries = array()) {
         this->plotSeries = $plotSeries;
     }
 
-    public function refresh(PHPExceller_Worksheet $worksheet) {
+    public function refresh(Worksheet $worksheet) {
         foreach(this->plotSeries as $plotSeries) {
             $plotSeries->refresh($worksheet);
         }

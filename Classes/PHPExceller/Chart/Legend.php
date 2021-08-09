@@ -1,30 +1,10 @@
 <?php
 namespace PHPExceller\Chart;
 
+use PHPExceller\Chart\Layout;
+
 /**
- * PHPExceller_Chart_Legend
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
+ * Based on PHPExcel_Chart_Legend
  */
 class Legend
 {
@@ -68,15 +48,15 @@ class Legend
     /**
      * Legend Layout
      *
-     * @var    PHPExceller_Chart_Layout
+     * @var    Layout
      */
     private $layout = null;
 
 
     /**
-     *    Create a new PHPExceller_Chart_Legend
+     *    Create a new Legend
      */
-    public function __construct($position = self::POSITION_RIGHT, PHPExceller_Chart_Layout $layout = null, $overlay = false)
+    public function __construct($position = self::POSITION_RIGHT, Layout $layout = null, $overlay = false)
     {
         $this->setPosition($position);
         $this->layout = $layout;
@@ -162,7 +142,7 @@ class Legend
     /**
      * Get Layout
      *
-     * @return PHPExceller_Chart_Layout
+     * @return Layout
      */
     public function getLayout()
     {

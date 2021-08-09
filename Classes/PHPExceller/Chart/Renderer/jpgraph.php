@@ -3,32 +3,12 @@ namespace PHPExceller\Chart\Renderer;
 
 use PHPExceller\Style\NumberFormat;
 use PHPExceller\Settings;
+use PHPExceller\Chart;
 
 /**
- * PHPExceller_Chart_Renderer_jpgraph
- *
- * Copyright (c) 2021 PHPExceller
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category    PHPExceller
- * @package        PHPExceller_Chart_Renderer
- * @copyright    Copyright (c) 2021 PHPExceller
- * @license        http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version        ##VERSION##, ##DATE##
+ * Based on PHPExcel_Chart_Renderer_jpgraph
  */
+
 class jpgraph
 {
     private static $width    = 640;
@@ -113,7 +93,7 @@ class jpgraph
             } else {
                 //    Format labels according to any formatting code
                 if (!is_null($datasetLabelFormatCode)) {
-                    $datasetLabels[$i] = PHPExceller_Style_NumberFormat::toFormattedString($datasetLabel, $datasetLabelFormatCode);
+                    $datasetLabels[$i] = NumberFormat::toFormattedString($datasetLabel, $datasetLabelFormatCode);
                 }
             }
             ++$testCurrentIndex;
@@ -565,7 +545,7 @@ class jpgraph
 
     private function renderAreaChart($groupCount, $dimensions = '2d')
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_line.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_line.php');
 
         $this->renderCartesianPlotArea();
 
@@ -577,7 +557,7 @@ class jpgraph
 
     private function renderLineChart($groupCount, $dimensions = '2d')
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_line.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_line.php');
 
         $this->renderCartesianPlotArea();
 
@@ -589,7 +569,7 @@ class jpgraph
 
     private function renderBarChart($groupCount, $dimensions = '2d')
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_bar.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_bar.php');
 
         $this->renderCartesianPlotArea();
 
@@ -601,9 +581,9 @@ class jpgraph
 
     private function renderScatterChart($groupCount)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_scatter.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_regstat.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_line.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_scatter.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_regstat.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_line.php');
 
         $this->renderCartesianPlotArea('linlin');
 
@@ -615,7 +595,7 @@ class jpgraph
 
     private function renderBubbleChart($groupCount)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_scatter.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_scatter.php');
 
         $this->renderCartesianPlotArea('linlin');
 
@@ -627,9 +607,9 @@ class jpgraph
 
     private function renderPieChart($groupCount, $dimensions = '2d', $doughnut = false, $multiplePlots = false)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_pie.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_pie.php');
         if ($dimensions == '3d') {
-            require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_pie3d.php');
+            require_once(Settings::getChartRendererPath().'jpgraph_pie3d.php');
         }
 
         $this->renderPiePlotArea($doughnut);
@@ -704,7 +684,7 @@ class jpgraph
 
     private function renderRadarChart($groupCount)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_radar.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_radar.php');
 
         $this->renderRadarPlotArea();
 
@@ -716,7 +696,7 @@ class jpgraph
 
     private function renderStockChart($groupCount)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_stock.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_stock.php');
 
         $this->renderCartesianPlotArea('intint');
 
@@ -728,7 +708,7 @@ class jpgraph
 
     private function renderContourChart($groupCount, $dimensions)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_contour.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_contour.php');
 
         $this->renderCartesianPlotArea('intint');
 
@@ -740,11 +720,11 @@ class jpgraph
 
     private function renderCombinationChart($groupCount, $dimensions, $outputDestination)
     {
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_line.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_bar.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_scatter.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_regstat.php');
-        require_once(PHPExceller_Settings::getChartRendererPath().'jpgraph_line.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_line.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_bar.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_scatter.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_regstat.php');
+        require_once(Settings::getChartRendererPath().'jpgraph_line.php');
 
         $this->renderCartesianPlotArea();
 
@@ -875,9 +855,9 @@ class jpgraph
 
 
     /**
-     * Create a new PHPExceller_Chart_Renderer_jpgraph
+     * Create a new jpgraph
      */
-    public function __construct(PHPExceller_Chart $chart)
+    public function __construct(Chart $chart)
     {
         $this->graph    = null;
         $this->chart    = $chart;
