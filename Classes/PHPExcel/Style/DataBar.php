@@ -33,6 +33,10 @@ TODO :
                       );
        $conditional->setConditionObjectFromArray($conditionType, $settingsArray);
        $phpExcelObj->getActiveSheet->getStyle('A1')->addConditionalStyle($conditional);
+
+for using Automatic type databars :
+                $settingsArray['cfvos']        = array(array('type'=>'min'),array('type'=>'max'));
+                $settingsArray['cfvosExtLst'] = array(array('type'=>'autoMin'),array('type'=>'autoMax'));
 </code>
 <code>
 
@@ -263,7 +267,7 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
      * Note : cfvos parameter will override all existing cfvo values; If you want to preserve them, add them manually with addCfvo
      */
     public function applyFromArray($pStyles = null, $checkInput=true, $isExtLstData= false) 
-        {
+    {
         if (!is_array($pStyles)) { throw new PHPExcel_Exception("DataBar : invalid input applyFromArray :".var_export($pStyles,true)); }
 
             // checks
@@ -320,8 +324,12 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
             {
 
                 $resultcfvos = array();
-                foreach ($pStyles['cfvos'] as $cfvotype) { $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype); }
+                foreach ($pStyles['cfvos'] as $cfvotype)
+                {
+                    $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype);
+                }
                 $this->addCfvos($resultcfvos,$isExtLstData); // add cfvo to ext_cfvo to preserve both
+
                 if ((!$isExtLstData) &&
                         ((array_key_exists('fillColor', $pStyles)) ||
                          (array_key_exists('borderColor', $pStyles)) ||
@@ -339,7 +347,24 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
                        )
                     )
                 {
-                    $this->addCfvos($resultcfvos,true);
+                    if (array_key_exists('cfvosExtLst', $pStyles))
+                    {
+                        $resultcfvos = array();
+                        foreach ($pStyles['cfvosExtLst'] as $cfvotype)
+                        {
+                            $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype);
+                        }
+                        $this->addCfvos($resultcfvos,true);
+                    }
+                    else
+                    {
+                        $resultcfvos = array();
+                        foreach ($pStyles['cfvos'] as $cfvotype)
+                        {
+                            $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype);
+                        }
+                        $this->addCfvos($resultcfvos,true);
+                    }
                 }
             }
 
@@ -409,7 +434,7 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
             {
                 $this->setShowValue((int)$cfRule->dataBar['showValue']) ;
             }
-            
+
             // check if an extLst object is used to mark up this databar
             if (isset($cfRule->extLst) &&
                 isset($cfRule->extLst->ext['uri']) &&
@@ -454,7 +479,6 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
                         }
                     }
                 }
-                
             }
         }
         else
@@ -462,7 +486,6 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
             // missing property
             throw new PHPExcel_Exception("DataBar : missing color or cvfo setting");
         }
-        
         return $this;
     }
     
@@ -1310,10 +1333,9 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
                         'attributes' => array(array('name' => 'type',   'attributes' => 'dataBar'),
                                                array('name' => 'id',     'attributes' => $this->getClassID()),
                                                array('name' => 'dataBar','attributes' => $data)));
-        
         return $result;
     }
-    
+
     /*
      * create a datastructure for creating the databar element with default properties
      *
@@ -1331,7 +1353,7 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
         if (!is_null($this->_showValue)) { $result['attributes'][] = array('name' => 'showValue' , 'attributes' => $this->_showValue); }
         return $result;
     }
-    
+
     /*
      * Indicates whether this object needs a reference to the entry in the extLst section
      *

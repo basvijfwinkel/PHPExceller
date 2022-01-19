@@ -181,18 +181,18 @@ class PHPExcel_Style_CFVOType
 			{
 				//<x14:cfvo type="percentile"><xm:f>90</xm:f></x14:cfvo>
 				$result =  array('name' => $name,'attributes' => array(array('name' => 'type', 
-																			 'attributes' => $this->_type),
-																	   array('name' => 'f', 
-																			 'namespace' => 'xm',
-																			 'attributes' => array('value' => $this->_childValue))));
+						 'attributes' => $this->_type),
+				                  array('name' => 'f', 
+						 'namespace' => 'xm',
+						 'attributes' => array('value' => $this->_childValue))));
 			}
 			else
 			{
 				//<cfvo type="percentile" val="10"/>
 				$result =  array('name' => $name,'attributes' => array(array('name' => 'type', 
-																			 'attributes' => $this->_type),
-																	   array('name' => 'val', 
-																			 'attributes' => $this->_childValue)));
+						 'attributes' => $this->_type),
+						   array('name' => 'val', 
+						 'attributes' => $this->_childValue)));
 			}
 			return $result;
 		}
