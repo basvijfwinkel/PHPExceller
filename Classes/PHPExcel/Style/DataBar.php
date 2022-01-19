@@ -33,6 +33,10 @@ TODO :
                       );
        $conditional->setConditionObjectFromArray($conditionType, $settingsArray);
        $phpExcelObj->getActiveSheet->getStyle('A1')->addConditionalStyle($conditional);
+
+for using Automatic type databars :
+                $settingsArray['cfvos']        = array(array('type'=>'min'),array('type'=>'max'));
+                $settingsArray['cfvosExtLst'] = array(array('type'=>'autoMin'),array('type'=>'autoMax'));
 </code>
 <code>
 
@@ -339,7 +343,24 @@ class PHPExcel_Style_DataBar extends PHPExcel_Style_GroupedConditional implement
                        )
                     )
                 {
-                    $this->addCfvos($resultcfvos,true);
+                    if (array_key_exists('cfvosExtLst', $pStyles))
+                    {
+                        $resultcfvos = array();
+                        foreach ($pStyles['cfvosExtLst'] as $cfvotype)
+                        {
+                            $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype);
+                        }
+                        $this->addCfvos($resultcfvos,true);
+                    }
+                    else
+                    {
+                        $resultcfvos = array();
+                        foreach ($pStyles['cfvos'] as $cfvotype)
+                        {
+                            $resultcfvos[] = PHPExcel_Style_CFVOType::fromArray($cfvotype);
+                        }
+                        $this->addCfvos($resultcfvos,true);
+                    }
                 }
             }
 
