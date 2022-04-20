@@ -384,6 +384,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
 					else
 					{
 						// image is a reference -> don't insert it but save the insertion ID
+
 						$this->getDrawingHashTable()->getByIndex($i)->setMediaReferenceId($addedMediaReferences[$referenceHashTag]['rId']);
 					}
 				}
